@@ -1,0 +1,11 @@
+{
+  "name": "anuin-hr-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check scripts/build.mjs && node --check scripts/serve.mjs && node --check dist/app.js && node --check dist/viewer.js",
+    "serve": "node scripts/serve.mjs"
+  }
+}
