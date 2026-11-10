@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="金刚石振动分选设备工程线稿">
+  <rect width="1200" height="600" fill="#175cff"/>
+  <g fill="none" stroke="#fffdf7" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M206 404h688l112 78H318z"/>
+    <path d="M300 404 412 190h410l82 214"/>
+    <path d="M412 190h410l-55 96H460z"/>
+    <path d="M520 286 584 372l64-86 66 86 64-86"/>
+    <path d="M586 404v92M740 404v92"/>
+    <path d="M480 496h330"/>
+    <path d="M318 148h128M382 84v128" stroke="#8fb0ff" stroke-dasharray="18 18"/>
+    <path d="M928 176 1016 88M1016 88v88M1016 88h-88" stroke="#8fb0ff"/>
+    <path d="M934 298l28-22 28 22-28 22zM1014 346l25-20 25 20-25 20zM860 250l22-18 22 18-22 18z"/>
+  </g>
+  <g fill="#ff6b3d"><circle cx="586" cy="404" r="11"/><circle cx="740" cy="404" r="11"/><circle cx="650" cy="286" r="11"/></g>
+</svg>

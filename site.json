@@ -1,0 +1,299 @@
+{
+  "site": {
+    "brand": "anuin",
+    "personal": {
+      "name": "蓝宇新",
+      "phone": "15007783481",
+      "email": "zhushanyao5006@163.com",
+      "email2": "Kezilmin2024@Gmail.com",
+      "wechat": "B01106002",
+      "educationPeriod": "2024.09 — 2028.06",
+      "school": "厦门大学（985）",
+      "college": "智能制造学院",
+      "major": "机械设计制造及其自动化",
+      "degree": "本科",
+      "graduation": "预计毕业：2028.06",
+      "headline": "机械设计与机器人结构",
+      "intro": "面向机器人竞赛与工程实践的机械设计作品集。",
+      "education": "厦门大学 · 机械设计制造及其自动化",
+      "directions": [
+        "机械结构设计",
+        "机器人机构",
+        "三维建模与装配"
+      ],
+      "contact": ""
+    },
+    "navigation": [
+      "首页",
+      "项目",
+      "关于",
+      "简历"
+    ],
+    "resume": {
+      "url": "/uploads/media/1793626105538-asset_534a2e1a21fb.pdf",
+      "title": "Resume_261102_.pdf"
+    },
+    "media": [
+      {
+        "id": "media_d6f79e450622",
+        "name": "双地块带伸缩夹爪_曲柄滑块_.glb",
+        "url": "/uploads/media/1793453752693-asset_831dd9c69082.glb",
+        "size": 6757216,
+        "type": "glb",
+        "projectId": "robocon-gripper",
+        "title": "",
+        "alt": ""
+      },
+      {
+        "id": "media_d13796d518b0",
+        "name": "Resume_261030_.pdf",
+        "url": "/uploads/media/1793454897994-asset_db163733379d.pdf",
+        "size": 389059,
+        "type": "pdf",
+        "projectId": "",
+        "title": "",
+        "alt": ""
+      },
+      {
+        "id": "media_ed57fbea05c3",
+        "name": "56cbf532c3e0469b013053700c39fcf1.jpg",
+        "url": "/uploads/media/1793455124456-asset_f5a1deb1ea65.jpg",
+        "size": 1773372,
+        "type": "jpg",
+        "projectId": "engineering-competition",
+        "title": "",
+        "alt": ""
+      },
+      {
+        "id": "media_16b583279ca7",
+        "name": "省赛总装_01.glb",
+        "url": "/uploads/media/1793535182240-asset_0fea230a57d1.glb",
+        "size": 36056948,
+        "type": "glb",
+        "projectId": "cross-strait-robot",
+        "title": "",
+        "alt": ""
+      },
+      {
+        "id": "media_66e873a8fa2b",
+        "name": "选型机.glb",
+        "url": "/uploads/media/1793535375374-asset_ad57f8d3aa4d.glb",
+        "size": 1347464,
+        "type": "glb",
+        "projectId": "diamond-sorter",
+        "title": "",
+        "alt": ""
+      },
+      {
+        "id": "media_66f504b7ced2",
+        "name": "27RC机械夹爪设计.glb",
+        "url": "/uploads/media/1793541832663-asset_6fd04c7a8205.glb",
+        "size": 6759980,
+        "type": "glb",
+        "projectId": "robocon-gripper",
+        "title": "",
+        "alt": ""
+      },
+      {
+        "id": "media_a223afd8e590",
+        "name": "8.27lan试验总装.glb",
+        "url": "/uploads/media/1793544400000-asset_sw_flattened.glb",
+        "size": 15842836,
+        "type": "glb",
+        "projectId": "engineering-competition",
+        "title": "",
+        "alt": ""
+      },
+      {
+        "id": "media_d8c159ccd1db",
+        "name": "Resume_261102_.pdf",
+        "url": "/uploads/media/1793626105538-asset_534a2e1a21fb.pdf",
+        "size": 1017824,
+        "type": "pdf",
+        "projectId": "",
+        "title": "",
+        "alt": ""
+      },
+      {
+        "id": "media_06440d80522e",
+        "name": "83a49ff03c8987f0d0ce8bd93d18ebde.jpg",
+        "url": "/uploads/media/1793863744745-asset_3d1678513578.jpg",
+        "size": 490821,
+        "type": "jpg",
+        "projectId": "cross-strait-robot",
+        "title": "",
+        "alt": ""
+      }
+    ],
+    "projects": [
+      {
+        "id": "robocon-gripper",
+        "title": "ROBOCON 2027「女娲补天」R1、R2 机械夹爪设计",
+        "period": "2026.10 — 至今",
+        "role": "机械组成员",
+        "status": "备赛中",
+        "featured": true,
+        "visible": true,
+        "tags": [
+          "夹爪机构",
+          "SolidWorks",
+          "机构设计"
+        ],
+        "summary": "围绕曲柄滑块双夹爪完成建模、材料选型与实物装配，持续备赛中。",
+        "cover": "",
+        "modelUrl": "",
+        "blocks": [
+          {
+            "id": "block_a8c36b82e7d6",
+            "type": "text",
+            "title": "本人工作",
+            "html": "<p><span style=\"letter-spacing: 0.005em;\">完成曲柄滑块双夹爪的三维建模、材料选型与实物装配；采用铝管与型材组合框架，通过角铝及三通铝管连接件完成连接。</span></p><p>设计舵机、一字型摇臂、导轨滑块与机械爪抓取机构，估算夹持所需扭矩并完成舵机选型；绘制夹紧力随滑块行程变化曲线，分析机构夹持特性。</p>",
+            "visible": true
+          },
+          {
+            "id": "block-1793544669681",
+            "type": "model",
+            "title": "3D 模型",
+            "html": "<p>待补充内容。</p>",
+            "url": "/uploads/media/1793453752693-asset_831dd9c69082.glb",
+            "visible": true,
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "id": "engineering-competition",
+        "title": "2027 中国大学生工程实践与创新能力大赛·智能+搬运赛道",
+        "period": "2026.06 — 至今",
+        "role": "队长",
+        "status": "进行中",
+        "featured": true,
+        "visible": true,
+        "tags": [
+          "全向轮底盘",
+          "伸缩轴",
+          "整车集成"
+        ],
+        "summary": "负责整车建模与装配，协调机械、电控与视觉组的接口与联合调试。",
+        "cover": "",
+        "modelUrl": "",
+        "blocks": [
+          {
+            "id": "block_503fff177447",
+            "type": "text",
+            "title": "本人工作",
+            "html": "<p>完成四全向轮底盘、翻转夹持机构与旋转料盘的整车三维建模及实物装配。同步带配合 MGW 滑轨滑块实现 R 轴径向伸缩，MGN 滑轨滑块实现 Z 轴升降。</p><p>在 SolidWorks 中分析夹爪运动轨迹；在伸缩轴增加带螺母捕获槽的双夹板结构，减小末端挠曲。</p>",
+            "visible": true
+          },
+          {
+            "id": "block-1793455137454",
+            "type": "image",
+            "title": "实体照片",
+            "html": "<p>待补充内容。</p>",
+            "url": "/uploads/media/1793455124456-asset_f5a1deb1ea65.jpg",
+            "visible": true,
+            "alt": ""
+          },
+          {
+            "id": "block-1793542597138",
+            "type": "model",
+            "title": "3D 模型",
+            "html": "<p>待补充内容。</p>",
+            "url": "/uploads/media/1793544400000-asset_sw_flattened.glb",
+            "visible": true,
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "id": "cross-strait-robot",
+        "title": "2025 福建省两岸机器人大赛·智能导航与分拣赛道",
+        "period": "2025.10 — 2025.11",
+        "role": "省赛四队队长",
+        "status": "已完成",
+        "featured": true,
+        "visible": true,
+        "tags": [
+          "三全向轮",
+          "传动设计",
+          "团队协作"
+        ],
+        "summary": "",
+        "cover": "",
+        "modelUrl": "",
+        "blocks": [
+          {
+            "id": "block_d743cfd80b4a",
+            "type": "text",
+            "title": "项目概述",
+            "html": "<p>完成三全向轮底盘、同步带Z轴升降、齿轮齿条及舵机驱动的 R 轴径向伸缩设计。回转机构采用交叉滚子轴承支承及底部舵机驱动。</p><p>团队成绩：赛道第一名。本人负责整车建模与装配，并协调结构布局、机构动作与识别控制接口。</p>",
+            "visible": true
+          },
+          {
+            "id": "block-1793535215316",
+            "type": "model",
+            "title": "3D 模型",
+            "html": "<p>待补充内容。</p>",
+            "url": "/uploads/media/1793535182240-asset_0fea230a57d1.glb",
+            "visible": true,
+            "alt": ""
+          },
+          {
+            "id": "block-1793863751621",
+            "type": "image",
+            "title": "项目图片",
+            "html": "<p>待补充内容。</p>",
+            "url": "/uploads/media/1793863744745-asset_3d1678513578.jpg",
+            "visible": true,
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "id": "diamond-sorter",
+        "title": "金刚石选型机设计与优化",
+        "period": "2026.07 — 至今",
+        "role": "科研助理",
+        "status": "进行中",
+        "featured": true,
+        "visible": true,
+        "tags": [
+          "设备建模",
+          "颗粒分选",
+          "科研"
+        ],
+        "summary": "围绕仿真需求完成设备测绘与建模，并辅助验证颗粒分选数学模型。",
+        "cover": "",
+        "modelUrl": "",
+        "blocks": [
+          {
+            "id": "block_033a6311f080",
+            "type": "text",
+            "title": "本人工作",
+            "html": "<p>根据仿真需求完成设备整机测绘与三维建模，模型经检查验证后用于后续仿真。</p><p>辅助验证金刚石颗粒分选数学模型，分析分选效果与振动角度的关系，筛选有利于颗粒分选的振动角度。</p>",
+            "visible": true
+          },
+          {
+            "id": "block-1793535380028",
+            "type": "model",
+            "title": "3D 模型",
+            "html": "<p>待补充内容。</p>",
+            "url": "/uploads/media/1793535375374-asset_ad57f8d3aa4d.glb",
+            "visible": true,
+            "alt": ""
+          }
+        ]
+      }
+    ],
+    "about": {
+      "team": "厦门大学 RCS 机器人队机械组成员 · 2025.09 — 至今",
+      "teamDetail": "参与机器人竞赛备赛与参赛，承担零部件选型与材料采购、机械机构装配和整机集成；与电控、视觉组沟通结构布局、安装接口和运动需求，配合方案调整与整机联调。",
+      "skills": [
+        "SolidWorks：零件及整机建模、装配设计与机构运动轨迹分析",
+        "机械设计与装配：夹爪、全向轮底盘、升降与伸缩机构",
+        "CAD：二维机械制图与尺寸标注规范"
+      ]
+    }
+  },
+  "updatedAt": "2026-11-05T07:29:40.112Z"
+}

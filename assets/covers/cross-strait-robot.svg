@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="三全向轮导航分拣机器人线稿">
+  <rect width="1200" height="600" fill="#175cff"/>
+  <g fill="none" stroke="#fffdf7" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M298 170h392l110 190-110 154H298L188 360z"/>
+    <path d="M298 170 402 360h288M188 360h214l-104 154M402 360l288 154"/>
+    <circle cx="402" cy="360" r="38" fill="#175cff"/>
+    <circle cx="690" cy="360" r="38" fill="#175cff"/>
+    <circle cx="298" cy="514" r="38" fill="#175cff"/>
+    <path d="M402 360 562 236l128 124M562 236v-118M562 118h144"/>
+    <path d="M816 360h164M898 278v164" stroke="#8fb0ff" stroke-dasharray="18 18"/>
+    <path d="M979 360 1015 324M979 360l-36-36" stroke="#8fb0ff"/>
+    <path d="M1020 170h72v72M1092 170l-90 90" stroke="#8fb0ff"/>
+  </g>
+  <g fill="#ff6b3d"><circle cx="562" cy="236" r="11"/><circle cx="402" cy="360" r="11"/><circle cx="690" cy="360" r="11"/></g>
+</svg>

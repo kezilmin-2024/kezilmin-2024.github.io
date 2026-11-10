@@ -1,0 +1,305 @@
+/* Formal site direction: Technical Brutalism. Kept separate so the original stylesheet remains recoverable. */
+:root{--br-ink:#0e1114;--br-muted:#5b6268;--br-paper:#f0eee7;--br-white:#fffdf7;--br-blue:#175cff;--br-shadow:6px 6px 0 var(--br-ink)}
+.theme-brutalist{background:var(--br-paper);color:var(--br-ink)}
+.theme-brutalist .site-header{height:76px;background:var(--br-paper);backdrop-filter:none;border-bottom:4px solid var(--br-ink);padding-left:max(24px,calc((100vw - 1240px)/2));padding-right:max(24px,calc((100vw - 1240px)/2))}
+.theme-brutalist .brand{font-size:24px;color:var(--br-ink)}
+.theme-brutalist .brand i{width:17px;height:17px;border:3px solid var(--br-ink);background:var(--br-blue);border-radius:0;box-shadow:none;position:relative}
+.theme-brutalist .brand i:after{content:"";position:absolute;width:5px;height:5px;left:3px;top:3px;background:var(--br-paper)}
+.theme-brutalist .nav{gap:10px}.theme-brutalist .nav a{padding:0 12px;color:var(--br-ink);font-weight:700}.theme-brutalist .nav a.active{color:var(--br-blue)}.theme-brutalist .nav a.active:after{height:4px;background:var(--br-blue)}
+.theme-brutalist .admin-link,.theme-brutalist .button{border:3px solid var(--br-ink);border-radius:0;background:var(--br-blue);color:var(--br-white);box-shadow:4px 4px 0 var(--br-ink);padding:10px 14px}.theme-brutalist .button.alt{background:var(--br-white);color:var(--br-ink)}.theme-brutalist .button:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--br-ink)}.theme-brutalist .button:disabled{opacity:.45;box-shadow:none}
+.theme-brutalist .home,.theme-brutalist .wrap{max-width:1240px}.theme-brutalist .hero-v2{min-height:640px;grid-template-columns:1.18fr .82fr;gap:40px;padding:82px 0 44px}.theme-brutalist .hero h1{font-size:clamp(58px,8vw,118px);line-height:.9;letter-spacing:-.1em;max-width:820px;margin:18px 0 28px}.theme-brutalist .hero p{color:#30363b;max-width:680px}.theme-brutalist .eyebrow{color:var(--br-blue);font-weight:800}
+.theme-brutalist .hero-system{min-height:520px;background:var(--br-ink);border:4px solid var(--br-ink);border-radius:0;box-shadow:8px 8px 0 var(--br-blue)}.theme-brutalist .hero-system:before{background-image:linear-gradient(#ffffff24 1px,transparent 1px),linear-gradient(90deg,#ffffff24 1px,transparent 1px);mask-image:none}.theme-brutalist .hero-system:after{inset:18px;border:2px solid #fff6}.theme-brutalist .system-top,.theme-brutalist .system-caption,.theme-brutalist .system-id{color:var(--br-white);font-weight:800}.theme-brutalist .system-id{color:#6f91ff}.theme-brutalist .ring-a{border-color:var(--br-blue);box-shadow:none}.theme-brutalist .ring-b{border-color:var(--br-white)}.theme-brutalist .system-axis{background:#fff8}
+.theme-brutalist .metric-rail{border-top:4px solid var(--br-ink);border-bottom:4px solid var(--br-ink)}.theme-brutalist .metric-rail>div{border-right:2px solid var(--br-ink)}.theme-brutalist .metric-rail strong{font-size:34px}.theme-brutalist .section{padding:90px 0}.theme-brutalist .section-head{border-bottom:4px solid var(--br-ink);padding-bottom:18px}.theme-brutalist .section h2{font-size:48px;letter-spacing:-.08em}.theme-brutalist .section-copy{color:#343b40}
+.theme-brutalist .project-grid{gap:22px}.theme-brutalist .project-card{border:3px solid var(--br-ink);border-radius:0;background:var(--br-white);box-shadow:var(--br-shadow);transition:transform .16s,box-shadow .16s}.theme-brutalist .project-card:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--br-ink)}.theme-brutalist .cover{height:170px;border-radius:0;background:var(--br-blue)}.theme-brutalist .cover:before{background:linear-gradient(135deg,transparent 45%,#fff8 45% 52%,transparent 52%),repeating-linear-gradient(90deg,transparent 0 24px,#fff4 25px 26px)}.theme-brutalist .cover:after{border:4px solid var(--br-white);border-radius:0;transform:rotate(12deg)}.theme-brutalist .cover.placeholder{background:var(--br-blue)}.theme-brutalist .cover-status{color:var(--br-white)}.theme-brutalist .card-body{padding:22px}.theme-brutalist .project-card h3{font-size:25px;line-height:1.1}.theme-brutalist .project-card p{color:#3d454a;font-size:14px}.theme-brutalist .tag{border:2px solid var(--br-ink);border-radius:0;background:var(--br-white);color:var(--br-ink);font-weight:700}.theme-brutalist .card-body .arrow-link{border-top:2px solid var(--br-ink);color:var(--br-ink)}
+.theme-brutalist .cover.cover-art:before,.theme-brutalist .cover.cover-art:after{display:none}
+.theme-brutalist .panel{border:3px solid var(--br-ink);border-radius:0;background:var(--br-white);box-shadow:5px 5px 0 var(--br-ink)}.theme-brutalist .team-panel{background:var(--br-ink);color:var(--br-white);box-shadow:5px 5px 0 var(--br-blue)}.theme-brutalist .team-panel .eyebrow{color:#6f91ff}.theme-brutalist .team-panel p{color:#e8e8e3}.theme-brutalist .footer{border-top:4px solid var(--br-ink);color:#4c5358;font-size:12px}.theme-brutalist .footer span:first-child{color:var(--br-ink)}
+.theme-brutalist .page-title{max-width:1240px}.theme-brutalist .page-title h1{font-size:82px;line-height:.9}.theme-brutalist .page-code{color:#3f474c}.theme-brutalist .filters{border-top:3px solid var(--br-ink)}.theme-brutalist .filter{border:2px solid var(--br-ink);border-radius:0;background:var(--br-white);color:var(--br-ink);font-weight:700}.theme-brutalist .filter.active{background:var(--br-blue);color:var(--br-white);border-color:var(--br-ink)}
+.theme-brutalist .detail-hero{min-height:470px;background:var(--br-ink);padding-top:82px;padding-bottom:72px}.theme-brutalist .detail-hero:before{background-image:linear-gradient(#ffffff24 1px,transparent 1px),linear-gradient(90deg,#ffffff24 1px,transparent 1px);mask-image:none}.theme-brutalist .detail-kicker{color:#6f91ff}.theme-brutalist .detail-hero h1{font-size:clamp(48px,7vw,100px);line-height:.92}.theme-brutalist .detail-hero p{color:#e8e8e3}.theme-brutalist .detail-hero .tag{border:2px solid var(--br-white);background:transparent;color:var(--br-white)}.theme-brutalist .detail-grid{padding-top:52px}.theme-brutalist .reading-guide{border-bottom:3px solid var(--br-ink);color:#454c51}.theme-brutalist .reading-guide span:first-child{color:var(--br-blue)}.theme-brutalist .block{border:3px solid var(--br-ink);border-radius:0;background:var(--br-white);box-shadow:5px 5px 0 var(--br-ink);padding:30px}.theme-brutalist .spec-panel{box-shadow:none}.theme-brutalist .source-panel{border-left:8px solid var(--br-blue);padding-left:20px;box-shadow:none}
+.theme-brutalist .detail-full-title{font-size:13px!important;line-height:1.5!important;color:#aab2b6!important;letter-spacing:.03em;margin:0 0 18px!important}
+.theme-brutalist .viewer-wrap{background:var(--br-ink);border:3px solid var(--br-ink);box-shadow:5px 5px 0 var(--br-blue);padding:0;min-height:520px}.theme-brutalist .viewer-heading{position:absolute;left:20px;top:18px;z-index:3;display:grid;gap:4px;color:var(--br-white)}.theme-brutalist .viewer-heading strong{font-size:25px;letter-spacing:-.04em}.theme-brutalist .viewer-kicker,.theme-brutalist .viewer-note{font:700 10px/1.4 Arial;letter-spacing:.1em;text-transform:uppercase;color:#6f91ff}.theme-brutalist .viewer-note{color:#cfd5d8;font-weight:400;letter-spacing:.03em;text-transform:none}.theme-brutalist .viewer-canvas{height:520px}.theme-brutalist .viewer-bar button{border:2px solid var(--br-ink);border-radius:0;background:var(--br-white);color:var(--br-ink);font-weight:700}.theme-brutalist .viewer-bar button[data-rotate].active{background:var(--br-blue);color:var(--br-white)}.theme-brutalist .component-tree{top:18px;right:18px;border:3px solid var(--br-ink);border-radius:0;background:#fffdf7ee}.theme-brutalist .empty-model{min-height:360px;border:3px dashed var(--br-blue);border-radius:0;background:var(--br-ink);color:var(--br-white);gap:12px}.theme-brutalist .empty-model strong{font-size:28px}.theme-brutalist .empty-model span{max-width:34ch;text-align:center;color:#d4d9dc}.theme-brutalist .empty-model .button{margin-top:8px}
+.theme-brutalist-admin{--ink:var(--br-ink);--muted:var(--br-muted);--line:var(--br-ink);--paper:var(--br-paper);--white:var(--br-white);--blue:var(--br-blue);--deep:var(--br-ink);--aqua:var(--br-blue);--shadow:none;background:var(--br-paper);color:var(--br-ink)}.theme-brutalist-admin .admin-side{background:var(--br-ink);border-right:4px solid var(--br-ink)}.theme-brutalist-admin .admin-side .brand{color:var(--br-white)}.theme-brutalist-admin .admin-side .brand i{background:var(--br-blue);border-radius:0;box-shadow:none;border:2px solid var(--br-white)}.theme-brutalist-admin .admin-side button.active,.theme-brutalist-admin .admin-side button:hover{background:var(--br-blue);color:var(--br-white);border-radius:0}.theme-brutalist-admin .admin-side button.active{box-shadow:none}.theme-brutalist-admin .admin-main{background:var(--br-paper)}.theme-brutalist-admin .admin-card{border:3px solid var(--br-ink);border-radius:0;box-shadow:6px 6px 0 var(--br-ink);background:var(--br-white)}.theme-brutalist-admin .admin-card h2{font-size:30px}.theme-brutalist-admin .button{border:3px solid var(--br-ink);border-radius:0;background:var(--br-blue);box-shadow:4px 4px 0 var(--br-ink)}.theme-brutalist-admin .button.alt{background:var(--br-white);color:var(--br-ink)}.theme-brutalist-admin .notice{border:3px solid var(--br-ink);border-left:10px solid var(--br-blue);border-radius:0;background:#e5e2d8;color:var(--br-ink)}.theme-brutalist-admin .dashboard-stat{border:3px solid var(--br-ink);border-radius:0;background:var(--br-paper)}.theme-brutalist-admin .dashboard-status{background:var(--br-ink);color:var(--br-white)}.theme-brutalist-admin input,.theme-brutalist-admin textarea,.theme-brutalist-admin select{border:3px solid var(--br-ink);border-radius:0;background:var(--br-white)}.theme-brutalist-admin .block-editor{border:3px solid var(--br-ink);border-radius:0;background:var(--br-paper)}.theme-brutalist-admin .media-row,.theme-brutalist-admin .project-row{border-top:3px solid var(--br-ink)}.theme-brutalist-admin .admin-model-modal{position:fixed;inset:0;z-index:90;background:#0e1114d9;display:grid;place-items:center;padding:24px}.theme-brutalist-admin .admin-model-modal[hidden]{display:none}.theme-brutalist-admin .admin-model-panel{position:relative;width:min(920px,100%);border:4px solid var(--br-ink);background:var(--br-paper);padding:22px;box-shadow:10px 10px 0 var(--br-blue)}.theme-brutalist-admin .admin-model-panel h2{margin:6px 0 16px}.theme-brutalist-admin .admin-model-close{position:absolute;right:12px;top:8px;border:0;background:transparent;font-size:34px;line-height:1;color:var(--br-ink)}.theme-brutalist-admin .admin-model-host{min-height:540px}.theme-brutalist-admin .admin-model-host .viewer-wrap{min-height:540px}.theme-brutalist-admin .admin-model-host .viewer-canvas{height:540px}
+@media(max-width:760px){.theme-brutalist .site-header{height:auto;min-height:80px;align-items:flex-start;padding:16px;flex-wrap:wrap;gap:12px}.theme-brutalist .nav{order:3;width:100%;overflow:auto;gap:4px;height:42px}.theme-brutalist .nav a{height:38px;white-space:nowrap;padding:0 9px}.theme-brutalist .nav a:not(.admin-link){display:grid}.theme-brutalist .admin-link{padding:6px 9px}.theme-brutalist .hero-v2{padding-top:44px;gap:24px}.theme-brutalist .hero h1{font-size:58px}.theme-brutalist .hero-system{min-height:300px;box-shadow:5px 5px 0 var(--br-blue)}.theme-brutalist .metric-rail{border-top-width:3px;border-bottom-width:3px}.theme-brutalist .metric-rail>div{border-right-width:2px}.theme-brutalist .section{padding:60px 0}.theme-brutalist .section h2{font-size:40px}.theme-brutalist .page-title h1{font-size:62px}.theme-brutalist .detail-hero{padding-top:54px;min-height:420px}.theme-brutalist .detail-hero h1{font-size:42px;max-width:330px}.theme-brutalist .detail-grid{padding-top:28px}.theme-brutalist .viewer-wrap{min-height:430px}.theme-brutalist .viewer-canvas{height:430px}.theme-brutalist .viewer-heading{left:14px;top:14px}.theme-brutalist .viewer-heading strong{font-size:20px}.theme-brutalist .viewer-note{max-width:220px}.theme-brutalist .component-tree{top:14px;right:14px;max-width:145px;max-height:150px;font-size:11px}.theme-brutalist .viewer-bar{left:10px;right:10px;bottom:10px}.theme-brutalist .viewer-bar button{padding:5px 7px;font-size:12px}.theme-brutalist-admin .admin-model-panel{padding:16px}.theme-brutalist-admin .admin-model-host,.theme-brutalist-admin .admin-model-host .viewer-wrap{min-height:430px}.theme-brutalist-admin .admin-model-host .viewer-canvas{height:430px}}
+
+.theme-brutalist .identity-board{display:grid;grid-template-columns:1fr 1.45fr .62fr;gap:14px;padding-top:30px}.theme-brutalist .identity-mark{min-height:112px;padding:16px;border:3px solid var(--br-ink);background:var(--br-white);box-shadow:6px 6px 0 var(--br-ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;color:var(--br-ink);font-weight:800;text-decoration:none}.theme-brutalist .identity-mark:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--br-blue)}.theme-brutalist .identity-mark img{display:block;max-width:100%;max-height:76px;width:auto;height:auto;object-fit:contain}.theme-brutalist .identity-mark span{font-size:12px;letter-spacing:.03em}.theme-brutalist .mark-college{background:var(--br-ink);border-color:var(--br-white);box-shadow:6px 6px 0 var(--br-blue);color:var(--br-white)}.theme-brutalist .mark-college img{width:100%;max-height:50px}.theme-brutalist .mark-rcs img{max-height:82px}.theme-brutalist .hero-v3{grid-template-columns:1.12fr .88fr;gap:42px;min-height:620px;padding:62px 0 54px;align-items:center}.theme-brutalist .hero-v3 .hero-name{font-size:clamp(30px,3vw,44px);line-height:1;letter-spacing:-.06em;white-space:nowrap;margin:22px 0 14px}.theme-brutalist .hero-role{font-size:clamp(24px,3vw,40px);font-weight:900;margin:0 0 16px;color:var(--br-ink)}.theme-brutalist .hero-v3 .hero-copy>p:not(.tags){max-width:680px}.theme-brutalist .contact-rail{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 28px}.theme-brutalist .contact-link{display:inline-flex;align-items:center;min-height:44px;padding:10px 14px;border:3px solid var(--br-ink);background:var(--br-white);box-shadow:4px 4px 0 var(--br-ink);font-size:17px;font-weight:800;color:var(--br-ink);text-decoration:none}.theme-brutalist .contact-link:hover{background:var(--br-blue);color:var(--br-white)}.theme-brutalist .hero-side{display:grid;gap:20px}.theme-brutalist .education-card{border:4px solid var(--br-ink);padding:24px;background:var(--br-paper);box-shadow:7px 7px 0 var(--br-blue)}.theme-brutalist .education-card h2{font-size:clamp(28px,3vw,46px);line-height:1;margin:14px 0 12px;letter-spacing:-.07em}.theme-brutalist .education-card p{font-size:18px;margin:0 0 14px}.theme-brutalist .education-card strong{font-size:16px}.theme-brutalist .education-meta{font-weight:800;color:#526b7c}.theme-brutalist .education-meta span{color:var(--br-blue);padding:0 8px}.theme-brutalist .hero-v3 .hero-system{min-height:360px}.theme-brutalist .quick-entry{padding:34px 0 0}.theme-brutalist .quick-entry-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}.theme-brutalist .quick-entry-link{min-height:148px;padding:24px;border:4px solid var(--br-ink);background:var(--br-white);box-shadow:8px 8px 0 var(--br-ink);display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:14px;color:var(--br-ink);text-decoration:none}.theme-brutalist .quick-entry-link span{align-self:start;color:var(--br-blue);font-weight:900;font-size:15px}.theme-brutalist .quick-entry-link strong{font-size:clamp(22px,2vw,30px);line-height:1.05}.theme-brutalist .quick-entry-link b{font-size:34px;color:var(--br-blue)}.theme-brutalist .quick-entry-link:hover{background:var(--br-blue);color:var(--br-white);transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--br-ink)}.theme-brutalist .quick-entry-link:hover span,.theme-brutalist .quick-entry-link:hover b{color:var(--br-white)}.theme-brutalist .quick-entry-link.resume-entry{background:var(--br-blue);color:var(--br-white);grid-column:1/-1;min-height:104px}.theme-brutalist .quick-entry-link.resume-entry span,.theme-brutalist .quick-entry-link.resume-entry b{color:var(--br-white)}
+@media (min-width:761px) and (max-width:1100px){.theme-brutalist .hero-v3{grid-template-columns:1fr;padding-top:48px}.theme-brutalist .hero-side{grid-template-columns:1fr 1fr}.theme-brutalist .hero-v3 .hero-system{min-height:360px}.theme-brutalist .quick-entry-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.theme-brutalist .identity-board{grid-template-columns:1fr 1fr;padding-top:18px;gap:10px}.theme-brutalist .identity-mark{min-height:94px;padding:10px;box-shadow:4px 4px 0 var(--br-ink)}.theme-brutalist .identity-mark img{max-height:54px}.theme-brutalist .identity-mark span{font-size:10px}.theme-brutalist .mark-college{grid-column:1/-1}.theme-brutalist .mark-college img{max-height:38px}.theme-brutalist .hero-v3{grid-template-columns:1fr;min-height:0;padding:54px 0 38px;gap:28px}.theme-brutalist .hero-v3 .hero-name{font-size:32px;white-space:normal;letter-spacing:-.06em}.theme-brutalist .hero-role{font-size:25px}.theme-brutalist .contact-rail{display:grid;gap:9px;margin:20px 0}.theme-brutalist .contact-link{font-size:14px;overflow-wrap:anywhere}.theme-brutalist .hero-side{gap:16px}.theme-brutalist .education-card{padding:18px}.theme-brutalist .education-card h2{font-size:31px}.theme-brutalist .education-card p{font-size:16px}.theme-brutalist .hero-v3 .hero-system{min-height:300px}.theme-brutalist .quick-entry{padding-top:18px}.theme-brutalist .quick-entry-grid{grid-template-columns:1fr;gap:14px}.theme-brutalist .quick-entry-link,.theme-brutalist .quick-entry-link.resume-entry{grid-column:auto;min-height:112px;padding:20px}.theme-brutalist .quick-entry-link strong{font-size:21px}}
+
+/* Hero balance: identity and contact stay left; the two primary destinations
+   become bearing-like circular controls on the right. */
+.theme-brutalist .hero-v3{position:relative;align-items:start}.theme-brutalist .hero-v3 .hero-copy{padding-top:42px}.theme-brutalist .hero-v3 .hero-actions{position:absolute;top:42px;right:0;width:43%;display:flex;justify-content:center;align-items:center;gap:18px;margin:0;z-index:2}.theme-brutalist .hero-v3 .hero-actions .button{width:205px;height:205px;padding:30px;border:5px solid var(--br-ink);border-radius:50%;box-shadow:8px 8px 0 var(--br-ink);display:flex;align-items:center;justify-content:center;gap:12px;text-align:center;font-size:24px;line-height:1.05}.theme-brutalist .hero-v3 .hero-actions .button.alt{background:var(--br-white);color:var(--br-ink)}.theme-brutalist .hero-v3 .hero-actions .button b{font-size:32px}.theme-brutalist .hero-v3 .hero-actions .button:hover{transform:translate(-3px,-3px) rotate(-2deg);box-shadow:12px 12px 0 var(--br-ink)}.theme-brutalist .hero-v3 .hero-actions .button.alt:hover{background:var(--br-ink);color:var(--br-white)}.theme-brutalist .hero-v3 .hero-side{padding-top:270px}
+@media (min-width:761px) and (max-width:1100px){.theme-brutalist .hero-v3 .hero-copy{padding-top:0}.theme-brutalist .hero-v3 .hero-actions{position:static;width:100%;justify-content:flex-start;margin-top:28px}.theme-brutalist .hero-v3 .hero-actions .button{width:180px;height:180px}.theme-brutalist .hero-v3 .hero-side{padding-top:0}}
+@media(max-width:760px){.theme-brutalist .hero-v3 .hero-copy{padding-top:0}.theme-brutalist .hero-v3 .hero-actions{position:static;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.theme-brutalist .hero-v3 .hero-actions .button{width:100%;height:auto;aspect-ratio:1;padding:18px;border-width:4px;box-shadow:5px 5px 0 var(--br-ink);font-size:18px}.theme-brutalist .hero-v3 .hero-actions .button b{font-size:25px}.theme-brutalist .hero-v3 .hero-side{padding-top:0}}
+
+/* Compact two-column hero. The prior version inherited no grid declaration,
+   so the right column sat below a tall artificial spacer. */
+.theme-brutalist .hero-v3{display:grid;min-height:0;padding:42px 0 38px;gap:32px}.theme-brutalist .hero-v3 .hero-copy{padding-top:18px}.theme-brutalist .hero-v3 .hero-actions{top:30px}.theme-brutalist .hero-v3 .hero-actions .button{width:190px;height:190px}.theme-brutalist .hero-v3 .hero-side{padding-top:218px}.theme-brutalist .hero-v3 .hero-system{display:none}.theme-brutalist .quick-entry{padding-top:22px}
+@media (min-width:761px) and (max-width:1100px){.theme-brutalist .hero-v3{grid-template-columns:1fr;gap:24px}.theme-brutalist .hero-v3 .hero-copy{padding-top:0}.theme-brutalist .hero-v3 .hero-side{padding-top:0}.theme-brutalist .hero-v3 .hero-actions{margin-top:22px}}
+@media(max-width:760px){.theme-brutalist .hero-v3{gap:20px;padding:38px 0 28px}.theme-brutalist .hero-v3 .hero-side{padding-top:0}.theme-brutalist .quick-entry{padding-top:8px}}
+.theme-brutalist-admin .admin-model-close{z-index:10;width:44px;height:44px;border:3px solid var(--br-ink);background:var(--br-white);font-size:30px;display:grid;place-items:center}
+@media (min-width:761px) and (max-width:900px){
+  .theme-brutalist-admin{display:block}
+  .theme-brutalist-admin .admin-side{position:static;height:auto;width:auto;padding:12px;display:flex;overflow:visible;flex-wrap:wrap;align-content:center;gap:4px;border-right:0;border-bottom:4px solid var(--br-ink)}
+  .theme-brutalist-admin .admin-side .brand{flex:0 0 100%;margin:0 10px 6px}
+  .theme-brutalist-admin .admin-context,.theme-brutalist-admin .admin-preview{display:none}
+  .theme-brutalist-admin .admin-side button{flex:1 1 calc(33.333% - 8px);min-width:150px;white-space:nowrap;width:auto;padding:8px 10px;justify-content:space-between}
+  .theme-brutalist-admin .admin-side button i{display:none}
+  .theme-brutalist-admin .admin-main{max-width:none;padding:22px 20px}
+  .theme-brutalist-admin .admin-top{align-items:flex-start;flex-direction:column}
+  .theme-brutalist-admin .admin-actions,.theme-brutalist-admin .dashboard-actions{flex-wrap:wrap}
+  .theme-brutalist-admin .dashboard-grid{grid-template-columns:1fr 1fr}
+  .theme-brutalist-admin .dashboard-status{grid-column:1/-1}
+  .theme-brutalist-admin .admin-card{padding:20px}
+  .theme-brutalist-admin .form-grid{grid-template-columns:1fr}
+  .theme-brutalist-admin .span-2{grid-column:auto}
+  .theme-brutalist-admin .media-row{grid-template-columns:1fr}
+}
+
+/* Identity hierarchy and contact composition.
+   School is the primary affiliation, the college is secondary, and RCS is the
+   team experience. The contact details read as one information panel instead
+   of four unrelated buttons. */
+.theme-brutalist .identity-board{
+  grid-template-columns:minmax(0,1.45fr) minmax(0,1fr) minmax(0,.62fr);
+  gap:16px;
+  align-items:stretch;
+}
+.theme-brutalist .identity-mark{
+  position:relative;
+  min-height:148px;
+  padding:38px 20px 18px;
+  gap:10px;
+  box-shadow:none;
+  overflow:hidden;
+}
+.theme-brutalist .identity-mark::before{
+  position:absolute;
+  top:12px;
+  left:14px;
+  font-size:12px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.04em;
+  color:#526b7c;
+}
+.theme-brutalist .mark-xmu::before{content:"就读院校"}
+.theme-brutalist .mark-college::before{content:"所属学院";color:#a9bdff}
+.theme-brutalist .mark-rcs::before{content:"团队经历"}
+.theme-brutalist .mark-xmu{
+  border-width:4px;
+  border-left-width:12px;
+  border-left-color:var(--br-blue);
+}
+.theme-brutalist .mark-xmu img{max-height:90px}
+.theme-brutalist .mark-xmu span{font-size:18px}
+.theme-brutalist .mark-college{
+  border:4px solid var(--br-ink);
+  box-shadow:none;
+}
+.theme-brutalist .mark-college img{max-height:54px}
+.theme-brutalist .mark-college span{font-size:13px;line-height:1.35}
+.theme-brutalist .mark-rcs{
+  border-width:3px;
+  background:#e6e3da;
+}
+.theme-brutalist .mark-rcs img{max-height:68px}
+.theme-brutalist .mark-rcs span{font-size:13px}
+.theme-brutalist .identity-mark:hover{
+  transform:translateY(-4px);
+  box-shadow:none;
+}
+
+.theme-brutalist .contact-rail{
+  display:grid;
+  grid-template-columns:minmax(0,.72fr) minmax(0,.72fr);
+  gap:4px;
+  width:min(100%,760px);
+  margin:26px 0 28px;
+  padding:4px;
+  border:4px solid var(--br-ink);
+  background:var(--br-ink);
+}
+.theme-brutalist .contact-rail::before{
+  content:"联系方式";
+  grid-column:1/-1;
+  padding:9px 12px 7px;
+  color:var(--br-white);
+  font-size:15px;
+  font-weight:900;
+}
+.theme-brutalist .contact-link{
+  min-width:0;
+  min-height:48px;
+  padding:11px 13px;
+  border:0;
+  box-shadow:none;
+  background:var(--br-white);
+  font-size:15px;
+  line-height:1.35;
+  overflow-wrap:anywhere;
+}
+.theme-brutalist .contact-link[href^="tel:"]{order:1}
+.theme-brutalist .contact-link:not(a){order:2}
+.theme-brutalist .contact-link[href^="mailto:"]{
+  order:3;
+  grid-column:1/-1;
+  justify-content:flex-start;
+  background:#e6e3da;
+}
+.theme-brutalist .contact-link[href^="mailto:"]:hover{
+  background:var(--br-blue);
+}
+
+@media (max-width:760px){
+  .theme-brutalist .identity-board{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .theme-brutalist .identity-mark,
+  .theme-brutalist .mark-college{
+    grid-column:1;
+    min-height:0;
+  }
+  .theme-brutalist .mark-xmu{padding:35px 14px 16px}
+  .theme-brutalist .mark-xmu img{max-height:62px}
+  .theme-brutalist .mark-college{padding:34px 14px 16px}
+  .theme-brutalist .mark-college img{max-height:40px}
+  .theme-brutalist .mark-rcs{
+    min-height:86px;
+    padding:30px 14px 12px;
+    flex-direction:row;
+    justify-content:flex-start;
+    text-align:left;
+  }
+  .theme-brutalist .mark-rcs img{max-height:48px}
+  .theme-brutalist .contact-rail{
+    grid-template-columns:1fr 1fr;
+    margin:20px 0 22px;
+  }
+  .theme-brutalist .contact-link{font-size:13px;padding:10px}
+}
+
+/* Responsive hardening: keep long technical content inside its column, give
+   tablet footers real side margins, and treat the phone as a separate
+   composition instead of a squeezed desktop layout. */
+.theme-brutalist .footer{
+  width:min(1160px,calc(100% - 48px));
+}
+.theme-brutalist .hero-copy,
+.theme-brutalist .hero-side,
+.theme-brutalist .project-card,
+.theme-brutalist .block,
+.theme-brutalist .sidebar,
+.theme-brutalist-admin .admin-main,
+.theme-brutalist-admin .admin-card,
+.theme-brutalist-admin .field{
+  min-width:0;
+}
+.theme-brutalist .project-card h3,
+.theme-brutalist .block,
+.theme-brutalist-admin .media-row,
+.theme-brutalist-admin .project-row,
+.theme-brutalist-admin input,
+.theme-brutalist-admin textarea,
+.theme-brutalist-admin select{
+  overflow-wrap:anywhere;
+}
+
+@media (max-width:760px){
+  .theme-brutalist .identity-board{
+    grid-template-columns:minmax(0,1.7fr) minmax(0,.8fr);
+  }
+  .theme-brutalist .mark-xmu{
+    grid-column:1/-1;
+    min-height:104px;
+    padding:34px 14px 12px;
+  }
+  .theme-brutalist .mark-college{
+    grid-column:1;
+    min-height:94px;
+    padding:32px 10px 12px;
+  }
+  .theme-brutalist .mark-college img{max-height:32px}
+  .theme-brutalist .mark-college span{font-size:11px}
+  .theme-brutalist .mark-rcs{
+    grid-column:2;
+    min-height:94px;
+    padding:30px 8px 10px;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+    gap:5px;
+  }
+  .theme-brutalist .mark-rcs img{max-height:40px}
+  .theme-brutalist .mark-rcs span{font-size:11px}
+
+  .theme-brutalist .hero-v3 .hero-copy{
+    display:flex;
+    flex-direction:column;
+  }
+  .theme-brutalist .hero-v3 .hero-actions{
+    order:5;
+    margin-top:20px;
+  }
+  .theme-brutalist .hero-v3 .hero-actions .button{
+    width:100%;
+    min-width:0;
+    min-height:58px;
+    height:58px;
+    aspect-ratio:auto;
+    padding:10px 14px;
+    border-radius:0;
+    font-size:16px;
+  }
+  .theme-brutalist .hero-v3 .hero-actions .button b{font-size:22px}
+  .theme-brutalist .hero-v3 .contact-rail{
+    order:6;
+    margin-top:20px;
+  }
+
+  .theme-brutalist .filters{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    padding-bottom:4px;
+  }
+  .theme-brutalist .filter{
+    min-height:44px;
+    padding:7px 5px;
+    font-size:11px;
+    line-height:1.25;
+  }
+
+  .theme-brutalist .component-tree{
+    max-width:116px;
+    max-height:108px;
+    padding:7px;
+    font-size:10px;
+  }
+  .theme-brutalist .viewer-heading{max-width:calc(100% - 145px)}
+  .theme-brutalist .viewer-note{display:none}
+  .theme-brutalist .viewer-bar{
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .theme-brutalist .viewer-bar button{
+    flex:0 0 auto;
+    min-height:44px;
+  }
+
+  .theme-brutalist .footer{
+    width:calc(100% - 32px);
+    margin-inline:16px;
+  }
+  .theme-brutalist-admin .admin-side button,
+  .theme-brutalist-admin .button,
+  .theme-brutalist-admin button{
+    min-height:44px;
+  }
+  .theme-brutalist-admin .admin-actions{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    width:100%;
+  }
+  .theme-brutalist-admin .admin-actions .save-state{
+    grid-column:1/-1;
+  }
+}

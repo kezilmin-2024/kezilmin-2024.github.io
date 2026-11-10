@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="曲柄滑块双夹爪工程线稿">
+  <rect width="1200" height="600" fill="#175cff"/>
+  <g fill="none" stroke="#fffdf7" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M182 440h275l72-68 62 68h255"/>
+    <path d="M520 372 455 230l-116-58M520 372l74-145 125-55"/>
+    <path d="M455 230 570 168l89 54M594 227l-46-101"/>
+    <path d="M384 178 322 118M700 172l66-55"/>
+    <path d="M321 116h-82M766 117h85"/>
+    <circle cx="520" cy="372" r="24" fill="#175cff"/>
+    <circle cx="455" cy="230" r="18" fill="#175cff"/>
+    <circle cx="594" cy="227" r="18" fill="#175cff"/>
+    <path d="M292 470c92 54 208 58 300 5" stroke="#8fb0ff" stroke-dasharray="18 20"/>
+    <path d="M608 475c104 42 225 27 303-30" stroke="#8fb0ff" stroke-dasharray="18 20"/>
+  </g>
+  <g fill="#ff6b3d">
+    <circle cx="520" cy="372" r="11"/><circle cx="455" cy="230" r="9"/><circle cx="594" cy="227" r="9"/>
+  </g>
+</svg>

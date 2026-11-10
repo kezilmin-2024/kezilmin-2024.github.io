@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="全向轮搬运车工程线稿">
+  <rect width="1200" height="600" fill="#175cff"/>
+  <g fill="none" stroke="#fffdf7" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M226 382h520l112 74H340z"/>
+    <path d="M314 382 384 218h286l76 164"/>
+    <path d="M384 218 456 136h143l71 82"/>
+    <path d="M527 136v-78M527 58h194M721 58v152"/>
+    <path d="M721 210h96l-42 92H721z"/>
+    <path d="M350 382v88M716 382v88"/>
+    <path d="M266 474c0 42 42 72 84 72s84-30 84-72M644 474c0 42 42 72 84 72s84-30 84-72"/>
+    <path d="M884 192h124M946 130v124" stroke="#8fb0ff" stroke-dasharray="18 18"/>
+    <path d="M983 190 1019 154M983 190l-36-36" stroke="#8fb0ff"/>
+  </g>
+  <g fill="#ff6b3d"><circle cx="527" cy="136" r="11"/><circle cx="721" cy="210" r="11"/><circle cx="716" cy="382" r="11"/></g>
+</svg>
