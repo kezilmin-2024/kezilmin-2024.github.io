@@ -1,0 +1,145 @@
+:root {
+  --motion-out: cubic-bezier(.23, 1, .32, 1);
+  --motion-in-out: cubic-bezier(.77, 0, .175, 1);
+}
+
+/* Public portfolio motion layer. The editor remains deliberately static. */
+.motion-enabled .theme-brutalist:not(.theme-brutalist-admin) [data-motion] {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition:
+    opacity 620ms var(--motion-out),
+    transform 620ms var(--motion-out),
+    clip-path 720ms var(--motion-out);
+  transition-delay: var(--motion-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.motion-enabled .theme-brutalist:not(.theme-brutalist-admin) [data-motion="clip"] {
+  clip-path: inset(0 0 100% 0);
+  transform: translate3d(0, 14px, 0);
+}
+
+.motion-enabled .theme-brutalist:not(.theme-brutalist-admin) [data-motion].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  clip-path: inset(0 0 0 0);
+  will-change: auto;
+}
+
+.theme-brutalist:not(.theme-brutalist-admin) .site-header .brand,
+.theme-brutalist:not(.theme-brutalist-admin) .site-header .nav a,
+.theme-brutalist:not(.theme-brutalist-admin) .quick-entry-link,
+.theme-brutalist:not(.theme-brutalist-admin) .identity-mark,
+.theme-brutalist:not(.theme-brutalist-admin) .project-card {
+  transition:
+    transform 200ms var(--motion-out),
+    box-shadow 200ms var(--motion-out),
+    color 160ms var(--motion-out),
+    background-color 160ms var(--motion-out),
+    border-color 160ms var(--motion-out);
+}
+
+.theme-brutalist:not(.theme-brutalist-admin) .project-card .cover {
+  overflow: hidden;
+}
+
+.theme-brutalist:not(.theme-brutalist-admin) .project-card .cover::before {
+  transform-origin: center;
+  animation: cover-drift 9s var(--motion-in-out) infinite alternate;
+}
+
+.theme-brutalist:not(.theme-brutalist-admin) .hero-system .ring-a {
+  transform-origin: center;
+  animation: mechanism-spin 18s linear infinite;
+}
+
+.theme-brutalist:not(.theme-brutalist-admin) .hero-system .ring-b {
+  transform-origin: center;
+  animation: mechanism-spin-reverse 14s linear infinite;
+}
+
+.theme-brutalist:not(.theme-brutalist-admin) .hero-system .system-axis {
+  animation: axis-signal 3.6s var(--motion-in-out) infinite;
+}
+
+.theme-brutalist:not(.theme-brutalist-admin) .hero-system .axis-y {
+  animation-delay: -1.8s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-brutalist:not(.theme-brutalist-admin) .project-card:hover {
+    transform: translate3d(-5px, -5px, 0);
+    box-shadow: 12px 12px 0 var(--ink, #111);
+  }
+
+  .theme-brutalist:not(.theme-brutalist-admin) .project-card:hover .cover::before {
+    transform: scale(1.055) rotate(.35deg);
+  }
+
+  .theme-brutalist:not(.theme-brutalist-admin) .identity-mark:hover,
+  .theme-brutalist:not(.theme-brutalist-admin) .quick-entry-link:hover {
+    transform: translate3d(-3px, -3px, 0);
+  }
+
+  .theme-brutalist:not(.theme-brutalist-admin) .nav a:hover {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+.pointer-active .theme-brutalist:not(.theme-brutalist-admin) a:active,
+.pointer-active .theme-brutalist:not(.theme-brutalist-admin) button:active {
+  transform: scale(.97);
+  transition-duration: 100ms;
+}
+
+@keyframes mechanism-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes mechanism-spin-reverse {
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes axis-signal {
+  0%, 100% { opacity: .35; transform: scaleX(.94); }
+  50% { opacity: .9; transform: scaleX(1); }
+}
+
+@keyframes cover-drift {
+  from { transform: scale(1.02) translate3d(-.7%, 0, 0); }
+  to { transform: scale(1.055) translate3d(.7%, -.5%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-enabled .theme-brutalist:not(.theme-brutalist-admin) [data-motion] {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    transition: opacity 180ms linear;
+    transition-delay: 0ms;
+  }
+
+  .theme-brutalist:not(.theme-brutalist-admin) .project-card .cover::before,
+  .theme-brutalist:not(.theme-brutalist-admin) .hero-system .ring-a,
+  .theme-brutalist:not(.theme-brutalist-admin) .hero-system .ring-b,
+  .theme-brutalist:not(.theme-brutalist-admin) .hero-system .system-axis {
+    animation: none;
+  }
+
+  .theme-brutalist:not(.theme-brutalist-admin) .project-card,
+  .theme-brutalist:not(.theme-brutalist-admin) .identity-mark,
+  .theme-brutalist:not(.theme-brutalist-admin) .quick-entry-link,
+  .theme-brutalist:not(.theme-brutalist-admin) .nav a {
+    transition: color 120ms linear, background-color 120ms linear, border-color 120ms linear;
+  }
+
+  .pointer-active .theme-brutalist:not(.theme-brutalist-admin) a:active,
+  .pointer-active .theme-brutalist:not(.theme-brutalist-admin) button:active,
+  .theme-brutalist:not(.theme-brutalist-admin) .project-card:hover,
+  .theme-brutalist:not(.theme-brutalist-admin) .identity-mark:hover,
+  .theme-brutalist:not(.theme-brutalist-admin) .quick-entry-link:hover,
+  .theme-brutalist:not(.theme-brutalist-admin) .nav a:hover {
+    transform: none;
+  }
+}
