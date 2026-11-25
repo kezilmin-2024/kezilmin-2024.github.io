@@ -1,5 +1,76 @@
 :root {
   --motion-out: cubic-bezier(.23, 1, .32, 1);
+  --editorial-enter: cubic-bezier(.22, 1, .36, 1);
+}
+
+/* One-shot homepage entrance; visibility remains the default state. */
+.editorial-intro .site-header {
+  animation: editorial-enter 350ms var(--editorial-enter) both;
+}
+
+.editorial-intro .hero-name,
+.editorial-intro .hero-role {
+  animation: editorial-rise 400ms var(--editorial-enter) both;
+}
+
+.editorial-intro .hero-name { animation-delay: 70ms; }
+.editorial-intro .hero-role { animation-delay: 130ms; }
+
+.editorial-intro .identity-mark {
+  animation: editorial-fade 360ms var(--editorial-enter) both;
+}
+
+.editorial-intro .mark-xmu { animation-delay: 200ms; }
+.editorial-intro .mark-college { animation-delay: 270ms; }
+.editorial-intro .mark-rcs { animation-delay: 340ms; }
+
+.editorial-intro .hero-actions .button {
+  animation: editorial-cta 350ms var(--editorial-enter) both;
+  animation-delay: 440ms;
+}
+
+.editorial-intro .hero-actions .button + .button {
+  animation-delay: 500ms;
+}
+
+.editorial-intro .hero-copy > p:not(.hero-role),
+.editorial-intro .contact-rail,
+.editorial-intro .education-card {
+  animation: editorial-fade 350ms var(--editorial-enter) both;
+  animation-delay: 850ms;
+}
+
+@keyframes editorial-enter {
+  from { opacity: 0; transform: translate3d(0, -8px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes editorial-rise {
+  from { opacity: 0; transform: translate3d(0, 16px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes editorial-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes editorial-cta {
+  from { opacity: 0; transform: scale(.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-intro .site-header,
+  .editorial-intro .hero-name,
+  .editorial-intro .hero-role,
+  .editorial-intro .identity-mark,
+  .editorial-intro .hero-actions .button,
+  .editorial-intro .hero-copy > p:not(.hero-role),
+  .editorial-intro .contact-rail,
+  .editorial-intro .education-card {
+    animation: none;
+  }
 }
 
 /* Interaction feedback only. Content is never hidden or delayed. */
