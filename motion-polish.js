@@ -39,3 +39,53 @@ function enableHomepageIntro() {
 }
 
 enableHomepageIntro();
+
+function enhanceHomepageMediaAndMotion() {
+  const root = document.querySelector("#app");
+  if (!root) return;
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const motionObserver = reducedMotion ? null : new IntersectionObserver(entries => {
+    entries.forEach(entry => entry.target.classList.toggle("is-motion-visible", entry.isIntersecting));
+  }, { rootMargin: "80px 0px" });
+
+  const prepare = scope => {
+    scope.querySelectorAll?.(".hero-actions .button, .contact-link").forEach(element => {
+      if (!element.dataset.motionReady && motionObserver) {
+        element.dataset.motionReady = "true";
+        motionObserver.observe(element);
+      }
+    });
+
+    scope.querySelectorAll?.("img").forEach(image => {
+      if (image.dataset.mediaReady) return;
+      image.dataset.mediaReady = "true";
+      image.decoding = "async";
+      if (image.closest(".identity-board")) {
+        image.loading = "eager";
+        image.fetchPriority = "high";
+      } else {
+        image.loading = "lazy";
+      }
+    });
+  };
+
+  document.addEventListener("error", event => {
+    const image = event.target;
+    if (!(image instanceof HTMLImageElement) || image.dataset.retryAttempted) return;
+    image.dataset.retryAttempted = "true";
+    const retryUrl = new URL(image.currentSrc || image.src, window.location.href);
+    retryUrl.searchParams.set("retry", String(Date.now()));
+    window.setTimeout(() => { image.src = retryUrl.href; }, 450);
+  }, true);
+
+  new MutationObserver(entries => {
+    entries.forEach(entry => entry.addedNodes.forEach(node => {
+      if (node instanceof Element) prepare(node);
+    }));
+  }).observe(root, { childList: true, subtree: true });
+
+  prepare(root);
+}
+
+enhanceHomepageMediaAndMotion();

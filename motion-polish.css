@@ -3,6 +3,55 @@
   --editorial-enter: cubic-bezier(.22, 1, .36, 1);
 }
 
+/* Quiet light motion for the two primary actions and contact details. */
+.theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button,
+.theme-brutalist:not(.theme-brutalist-admin) .contact-link {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button::before,
+.theme-brutalist:not(.theme-brutalist-admin) .contact-link::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -65%;
+  left: -55%;
+  width: 32%;
+  height: 230%;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 42%), transparent);
+  opacity: 0;
+  transform: translate3d(-180%, 0, 0) rotate(18deg);
+  animation: surface-glint 5.6s var(--motion-out) infinite;
+  animation-play-state: paused;
+}
+
+.theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button.alt::before,
+.theme-brutalist:not(.theme-brutalist-admin) .contact-link::before {
+  background: linear-gradient(90deg, transparent, rgb(36 99 235 / 18%), transparent);
+}
+
+.theme-brutalist:not(.theme-brutalist-admin) .contact-link::before {
+  animation-duration: 7.2s;
+  animation-delay: var(--glint-delay, 0ms);
+}
+
+.theme-brutalist:not(.theme-brutalist-admin) .contact-link:nth-child(2) { --glint-delay: 900ms; }
+.theme-brutalist:not(.theme-brutalist-admin) .contact-link:nth-child(3) { --glint-delay: 1800ms; }
+.theme-brutalist:not(.theme-brutalist-admin) .contact-link:nth-child(4) { --glint-delay: 2700ms; }
+
+.theme-brutalist:not(.theme-brutalist-admin) .is-motion-visible::before {
+  animation-play-state: running;
+}
+
+@keyframes surface-glint {
+  0%, 18% { opacity: 0; transform: translate3d(-180%, 0, 0) rotate(18deg); }
+  28% { opacity: .8; }
+  42%, 100% { opacity: 0; transform: translate3d(720%, 0, 0) rotate(18deg); }
+}
+
 /* One-shot homepage entrance; visibility remains the default state. */
 .editorial-intro .site-header {
   animation: editorial-enter 350ms var(--editorial-enter) both;
@@ -77,6 +126,7 @@
 .theme-brutalist:not(.theme-brutalist-admin) .site-header .brand,
 .theme-brutalist:not(.theme-brutalist-admin) .site-header .nav a,
 .theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button,
+.theme-brutalist:not(.theme-brutalist-admin) .contact-link,
 .theme-brutalist:not(.theme-brutalist-admin) .quick-entry-link,
 .theme-brutalist:not(.theme-brutalist-admin) .identity-mark,
 .theme-brutalist:not(.theme-brutalist-admin) .project-card {
@@ -118,7 +168,12 @@
   }
 
   .theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button:hover {
-    transform: scale(1.015);
+    transform: translate3d(0, -3px, 0) scale(1.015);
+  }
+
+  .theme-brutalist:not(.theme-brutalist-admin) .home .contact-link:hover {
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 4px 6px 0 var(--home-ink, #111);
   }
 
   .theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button:hover b {
@@ -152,8 +207,15 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button::before,
+  .theme-brutalist:not(.theme-brutalist-admin) .contact-link::before {
+    animation: none;
+    opacity: 0;
+  }
+
   .theme-brutalist:not(.theme-brutalist-admin) .project-card,
   .theme-brutalist:not(.theme-brutalist-admin) .identity-mark,
+  .theme-brutalist:not(.theme-brutalist-admin) .contact-link,
   .theme-brutalist:not(.theme-brutalist-admin) .quick-entry-link,
   .theme-brutalist:not(.theme-brutalist-admin) .nav a,
   .theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button {
@@ -164,6 +226,7 @@
   .pointer-active .theme-brutalist:not(.theme-brutalist-admin) button:active,
   .theme-brutalist:not(.theme-brutalist-admin) .project-card:hover,
   .theme-brutalist:not(.theme-brutalist-admin) .identity-mark:hover,
+  .theme-brutalist:not(.theme-brutalist-admin) .contact-link:hover,
   .theme-brutalist:not(.theme-brutalist-admin) .quick-entry-link:hover,
   .theme-brutalist:not(.theme-brutalist-admin) .nav a:hover,
   .theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button:hover,
