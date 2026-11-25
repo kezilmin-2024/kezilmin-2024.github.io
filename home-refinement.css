@@ -109,6 +109,11 @@
   letter-spacing: .005em;
 }
 
+.theme-brutalist .home .contact-link:hover {
+  background: var(--home-blue);
+  color: #fff;
+}
+
 .theme-brutalist .home .education-card {
   padding: 28px;
   border-width: 2px;
