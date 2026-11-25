@@ -1,0 +1,367 @@
+/* Homepage-only visual refinement: industrial editorial + Swiss hierarchy. */
+.theme-brutalist .home {
+  --home-paper: #f2f0e8;
+  --home-ink: #111315;
+  --home-blue: #2463eb;
+  --home-steel: #56616b;
+  --home-line: #c9cdd0;
+  color: var(--home-ink);
+}
+
+.theme-brutalist .home .eyebrow {
+  color: var(--home-blue);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: .115em;
+}
+
+.theme-brutalist .home .identity-board {
+  grid-template-columns: 1fr 1.42fr .68fr;
+  gap: 16px;
+  padding-top: 26px;
+  align-items: stretch;
+}
+
+.theme-brutalist .home .identity-mark {
+  min-height: 118px;
+  padding: 18px 20px;
+  gap: 10px;
+  border-width: 2px;
+  box-shadow: 5px 5px 0 var(--home-ink);
+}
+
+.theme-brutalist .home .identity-mark span {
+  max-width: 42ch;
+  font-size: 11px;
+  line-height: 1.35;
+  letter-spacing: .025em;
+}
+
+.theme-brutalist .home .identity-mark img {
+  max-height: 72px;
+}
+
+.theme-brutalist .home .mark-college {
+  box-shadow: 5px 5px 0 var(--home-blue);
+}
+
+.theme-brutalist .home .mark-college img {
+  max-height: 52px;
+}
+
+.theme-brutalist .home .mark-rcs img {
+  max-height: 78px;
+}
+
+.theme-brutalist .home .hero-v3 {
+  gap: clamp(32px, 4vw, 58px);
+  padding-top: 48px;
+  padding-bottom: 42px;
+}
+
+.theme-brutalist .home .hero-v3 .hero-copy {
+  padding-top: 14px;
+}
+
+.theme-brutalist .home .hero-v3 .hero-name {
+  margin: 20px 0 12px;
+  font-size: clamp(30px, 2.8vw, 40px);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+
+.theme-brutalist .home .hero-role {
+  max-width: 13ch;
+  margin: 0 0 22px;
+  color: #323a40;
+  font-size: clamp(38px, 4.8vw, 66px);
+  font-weight: 680;
+  line-height: 1.04;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+
+.theme-brutalist .home .hero-copy > p:not(.hero-role):not(.tags) {
+  max-width: 58ch;
+  margin-block: 0;
+  color: #293239;
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 1.72;
+  letter-spacing: .008em;
+}
+
+.theme-brutalist .home .contact-rail {
+  gap: 9px;
+  margin: 24px 0 28px;
+}
+
+.theme-brutalist .home .contact-link {
+  min-height: 46px;
+  padding: 10px 14px;
+  border-width: 2px;
+  background: linear-gradient(135deg, #fff 0%, #f7f6f0 100%);
+  box-shadow: 3px 3px 0 var(--home-ink);
+  font-size: 16px;
+  font-weight: 720;
+  line-height: 1.25;
+  letter-spacing: .005em;
+}
+
+.theme-brutalist .home .education-card {
+  padding: 28px;
+  border-width: 2px;
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 42%), transparent 52%),
+    var(--home-paper);
+  box-shadow: 6px 6px 0 var(--home-blue);
+}
+
+.theme-brutalist .home .education-meta {
+  margin-top: 12px;
+  color: var(--home-steel);
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: .015em;
+}
+
+.theme-brutalist .home .education-card h2 {
+  margin: 14px 0 12px;
+  font-size: clamp(32px, 3.5vw, 50px);
+  font-weight: 760;
+  line-height: 1.03;
+  letter-spacing: -.055em;
+}
+
+.theme-brutalist .home .education-card p {
+  max-width: 32ch;
+  margin-bottom: 18px;
+  color: #2d3840;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.theme-brutalist .home .education-card strong {
+  display: block;
+  padding-top: 14px;
+  border-top: 1px solid var(--home-line);
+  font-size: 14px;
+  font-weight: 720;
+  letter-spacing: .025em;
+}
+
+.theme-brutalist .home .hero-v3 .hero-actions {
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.theme-brutalist .home .hero-v3 .hero-actions .button {
+  width: 188px;
+  height: 188px;
+  padding: 34px;
+  gap: 10px;
+  border-width: 3px;
+  background: var(--home-blue);
+  box-shadow:
+    7px 7px 0 var(--home-ink),
+    inset 0 0 0 1px rgb(255 255 255 / 24%);
+  font-size: 21px;
+  font-weight: 760;
+  line-height: 1.12;
+  letter-spacing: -.025em;
+}
+
+.theme-brutalist .home .hero-v3 .hero-actions .button.alt {
+  background: #fffef9;
+  color: var(--home-ink);
+  box-shadow:
+    7px 7px 0 var(--home-ink),
+    inset 0 0 0 1px rgb(17 19 21 / 10%);
+}
+
+.theme-brutalist .home .hero-v3 .hero-actions .button b {
+  font-size: 29px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.theme-brutalist .home .quick-entry {
+  padding-top: 18px;
+}
+
+.theme-brutalist .home .quick-entry-grid {
+  gap: 16px;
+}
+
+.theme-brutalist .home .quick-entry-link {
+  min-height: 140px;
+  padding: 22px 24px;
+  border-width: 2px;
+  box-shadow: 5px 5px 0 var(--home-ink);
+}
+
+.theme-brutalist .home .quick-entry-link strong {
+  font-weight: 720;
+  letter-spacing: -.025em;
+}
+
+.theme-brutalist .home .metric-rail {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.theme-brutalist .home .metric-rail > div {
+  border-right-width: 1px;
+}
+
+.theme-brutalist .home .section {
+  padding-block: clamp(64px, 7vw, 88px);
+}
+
+.theme-brutalist .home .section-head {
+  gap: 26px;
+  padding-bottom: 20px;
+  border-bottom-width: 2px;
+}
+
+.theme-brutalist .home .section h2 {
+  font-size: clamp(38px, 4vw, 52px);
+  font-weight: 720;
+  line-height: 1;
+  letter-spacing: -.055em;
+}
+
+.theme-brutalist .home .section-copy {
+  max-width: 34ch;
+  color: var(--home-steel);
+  line-height: 1.65;
+}
+
+.theme-brutalist .home .project-grid {
+  gap: 24px;
+}
+
+.theme-brutalist .home .project-card,
+.theme-brutalist .home .panel {
+  border-width: 2px;
+  box-shadow: 5px 5px 0 var(--home-ink);
+}
+
+.theme-brutalist .home .project-card h3,
+.theme-brutalist .home .panel h3 {
+  font-weight: 720;
+  letter-spacing: -.035em;
+}
+
+.theme-brutalist .home .tag {
+  border-width: 1px;
+  font-weight: 650;
+}
+
+.theme-brutalist .home a:focus-visible,
+.theme-brutalist .home button:focus-visible {
+  outline: 3px solid var(--home-blue);
+  outline-offset: 5px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-brutalist .home .hero-v3 .hero-actions .button:hover {
+    box-shadow:
+      10px 10px 0 var(--home-ink),
+      inset 0 0 0 1px rgb(255 255 255 / 24%);
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .theme-brutalist .home .identity-board {
+    grid-template-columns: 1fr 1.35fr .72fr;
+  }
+
+  .theme-brutalist .home .hero-v3 .hero-actions .button {
+    width: 174px;
+    height: 174px;
+  }
+}
+
+@media (max-width: 760px) {
+  .theme-brutalist .home .identity-board {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-top: 18px;
+  }
+
+  .theme-brutalist .home .identity-mark {
+    min-height: 92px;
+    padding: 11px;
+    box-shadow: 3px 3px 0 var(--home-ink);
+  }
+
+  .theme-brutalist .home .mark-college {
+    grid-column: 1 / -1;
+  }
+
+  .theme-brutalist .home .hero-v3 {
+    gap: 24px;
+    padding-top: 42px;
+    padding-bottom: 34px;
+  }
+
+  .theme-brutalist .home .hero-v3 .hero-name {
+    margin-top: 16px;
+    font-size: 30px;
+  }
+
+  .theme-brutalist .home .hero-role {
+    max-width: 11ch;
+    font-size: clamp(34px, 11vw, 44px);
+    line-height: 1.08;
+  }
+
+  .theme-brutalist .home .contact-rail {
+    margin-block: 20px 24px;
+  }
+
+  .theme-brutalist .home .contact-link {
+    min-width: 0;
+    font-size: 14px;
+  }
+
+  .theme-brutalist .home .hero-v3 .hero-actions {
+    gap: 12px;
+  }
+
+  .theme-brutalist .home .hero-v3 .hero-actions .button {
+    width: 100%;
+    height: auto;
+    padding: 18px;
+    border-width: 2px;
+    box-shadow: 4px 4px 0 var(--home-ink);
+    font-size: 17px;
+  }
+
+  .theme-brutalist .home .education-card {
+    padding: 20px;
+  }
+
+  .theme-brutalist .home .education-card h2 {
+    font-size: 32px;
+  }
+
+  .theme-brutalist .home .quick-entry-grid {
+    gap: 12px;
+  }
+
+  .theme-brutalist .home .quick-entry-link,
+  .theme-brutalist .home .quick-entry-link.resume-entry {
+    min-height: 108px;
+    padding: 18px;
+  }
+
+  .theme-brutalist .home .section {
+    padding-block: 58px;
+  }
+
+  .theme-brutalist .home .section-head {
+    gap: 18px;
+  }
+}
