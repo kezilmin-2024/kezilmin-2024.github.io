@@ -21,6 +21,11 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .theme-brutalist:not(.theme-brutalist-admin) .home .contact-link:hover {
+    background: #2463eb;
+    color: #fff;
+  }
+
   .theme-brutalist:not(.theme-brutalist-admin) .project-card:hover {
     transform: translate3d(-4px, -4px, 0);
     box-shadow: 9px 9px 0 var(--ink, #111);
