@@ -195,6 +195,56 @@
   }
 }
 
+/* Project detail: keep reference photos compact on the side so the live model remains primary. */
+@media (min-width: 761px) {
+  .theme-brutalist .detail-grid article:has(.image-block) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
+    gap: 18px;
+    align-items: start;
+  }
+
+  .theme-brutalist .detail-grid article:has(.image-block) > .reading-guide {
+    grid-column: 1 / -1;
+  }
+
+  .theme-brutalist .detail-grid article:has(.image-block) > .image-block {
+    grid-column: 2;
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 18px;
+    padding: 12px;
+  }
+
+  .theme-brutalist .detail-grid article:has(.image-block) > .image-block img {
+    display: block;
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+  }
+
+  .theme-brutalist .detail-grid article:has(.image-block) > .viewer-wrap,
+  .theme-brutalist .detail-grid article:has(.image-block) > .block:not(.image-block),
+  .theme-brutalist .detail-grid article:has(.image-block) > .empty-model {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .theme-brutalist .detail-grid article > .image-block {
+    width: 100%;
+    margin: 0 0 16px;
+    padding: 10px;
+  }
+
+  .theme-brutalist .detail-grid article > .image-block img {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    object-fit: contain;
+  }
+}
+
 .pointer-active .theme-brutalist:not(.theme-brutalist-admin) a:active,
 .pointer-active .theme-brutalist:not(.theme-brutalist-admin) button:active {
   transform: scale(.98);
