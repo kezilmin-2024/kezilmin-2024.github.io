@@ -28,6 +28,21 @@
   animation-play-state: paused;
 }
 
+.theme-brutalist .model-loading .model-retry {
+  border: 2px solid #fff;
+  padding: 7px 10px;
+  background: var(--br-blue);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.theme-brutalist .model-loading .model-retry:hover,
+.theme-brutalist .model-loading .model-retry:focus-visible {
+  background: #fff;
+  color: var(--br-ink);
+}
+
 .theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button.alt::before,
 .theme-brutalist:not(.theme-brutalist-admin) .contact-link::before {
   background: linear-gradient(90deg, transparent, rgb(36 99 235 / 18%), transparent);
