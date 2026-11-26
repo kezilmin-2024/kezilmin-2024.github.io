@@ -89,12 +89,12 @@
 .editorial-intro .mark-rcs { animation-delay: 340ms; }
 
 .editorial-intro .hero-actions .button {
-  animation: editorial-cta 350ms var(--editorial-enter) both;
+  animation: editorial-cta 450ms var(--editorial-enter) both;
   animation-delay: 440ms;
 }
 
 .editorial-intro .hero-actions .button + .button {
-  animation-delay: 500ms;
+  animation-delay: 540ms;
 }
 
 .editorial-intro .hero-copy > p:not(.hero-role),
@@ -392,6 +392,156 @@
   .theme-brutalist:not(.theme-brutalist-admin) .nav a:hover,
   .theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button:hover,
   .theme-brutalist:not(.theme-brutalist-admin) .hero-actions .button:hover b {
+    transform: none;
+  }
+}
+.ambient-welcome {
+  position: fixed;
+  z-index: -1;
+  inset: 50% 0 auto;
+  overflow: hidden;
+  color: #718da8;
+  opacity: 0.055;
+  filter: blur(2px);
+  font: 900 clamp(112px, 22vw, 340px)/0.85 Arial, sans-serif;
+  letter-spacing: -0.075em;
+  white-space: nowrap;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+  transform: translate3d(0, -50%, 0);
+  animation: ambient-welcome-drift 18s ease-in-out infinite;
+}
+
+.site-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+@keyframes ambient-welcome-drift {
+  0%, 100% { transform: translate3d(-20px, -50%, 0); }
+  50% { transform: translate3d(20px, -50%, 0); }
+}
+
+@media (max-width: 700px) {
+  .ambient-welcome {
+    font-size: clamp(64px, 18vw, 112px);
+    opacity: 0.04;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-welcome {
+    animation: none;
+  }
+}
+
+/* Two circular actions: precise hierarchy and physical response. */
+.theme-brutalist .home .hero-v3 .hero-actions .button {
+  gap: 10px;
+  padding: 22px;
+  transform-origin: center;
+  transition: transform 220ms cubic-bezier(.22, 1, .36, 1), box-shadow 220ms cubic-bezier(.22, 1, .36, 1), border-color 180ms ease;
+}
+
+.theme-brutalist .home .hero-v3 .hero-actions .button .cta-copy {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  text-align: left;
+}
+
+.theme-brutalist .home .hero-v3 .hero-actions .button .cta-copy strong {
+  font-size: clamp(18px, 1.7vw, 23px);
+  line-height: 1.12;
+  white-space: nowrap;
+}
+
+.theme-brutalist .home .hero-v3 .hero-actions .button .cta-copy small {
+  font: 700 10px/1.2 Arial, sans-serif;
+  letter-spacing: .12em;
+  white-space: nowrap;
+}
+
+.theme-brutalist .home .hero-v3 .hero-actions .button.alt .cta-copy strong {
+  font-size: clamp(17px, 1.55vw, 21px);
+}
+
+.theme-brutalist .home .hero-v3 .hero-actions .button b {
+  flex: none;
+  font-size: 26px;
+  transition: transform 220ms cubic-bezier(.22, 1, .36, 1), color 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-brutalist .home .hero-v3 .hero-actions .button:hover {
+    transform: translate3d(-4px, -4px, 0);
+    box-shadow: 11px 11px 0 var(--home-ink);
+  }
+
+  .theme-brutalist .home .hero-v3 .hero-actions .button:hover b {
+    transform: translateX(5px);
+  }
+
+  .theme-brutalist .home .hero-v3 .hero-actions .button.alt:hover {
+    transform: translate3d(-2px, -2px, 0);
+    background: #fffef9;
+    color: var(--home-ink);
+    border-color: var(--home-blue);
+    box-shadow: 8px 8px 0 var(--home-ink);
+  }
+
+  .theme-brutalist .home .hero-v3 .hero-actions .button.alt:hover b {
+    color: var(--home-blue);
+    transform: translateX(4px);
+  }
+
+  .theme-brutalist .home .identity-mark:hover {
+    box-shadow: 7px 7px 0 var(--home-blue);
+  }
+}
+
+.pointer-active .theme-brutalist .home .hero-v3 .hero-actions .button:active {
+  transform: translate3d(2px, 2px, 0) scale(.985);
+  box-shadow: 2px 2px 0 var(--home-ink);
+  transition-duration: 100ms;
+}
+
+.theme-brutalist .home .hero-v3 .hero-actions .button:focus-visible {
+  outline: 3px solid var(--home-blue);
+  outline-offset: 6px;
+}
+
+@media (max-width: 760px) {
+  .theme-brutalist .home .hero-v3 .hero-actions .button {
+    gap: 4px;
+    padding: 10px;
+  }
+
+  .theme-brutalist .home .hero-v3 .hero-actions .button .cta-copy strong,
+  .theme-brutalist .home .hero-v3 .hero-actions .button.alt .cta-copy strong {
+    font-size: clamp(14px, 4.2vw, 18px);
+  }
+
+  .theme-brutalist .home .hero-v3 .hero-actions .button .cta-copy small {
+    font-size: 8px;
+    letter-spacing: .06em;
+  }
+
+  .theme-brutalist .home .hero-v3 .hero-actions .button b {
+    font-size: 21px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-brutalist .home .hero-v3 .hero-actions .button,
+  .theme-brutalist .home .hero-v3 .hero-actions .button b {
+    transition: color 120ms linear, border-color 120ms linear;
+  }
+
+  .theme-brutalist .home .hero-v3 .hero-actions .button:hover,
+  .theme-brutalist .home .hero-v3 .hero-actions .button:hover b,
+  .pointer-active .theme-brutalist .home .hero-v3 .hero-actions .button:active {
     transform: none;
   }
 }
