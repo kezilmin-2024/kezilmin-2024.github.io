@@ -195,53 +195,149 @@
   }
 }
 
-/* Project detail: keep reference photos compact on the side so the live model remains primary. */
-@media (min-width: 761px) {
-  .theme-brutalist .detail-grid article:has(.image-block) {
+/* Project detail workspace: the model is the 70% stage; evidence and text form one 30% rail. */
+.theme-brutalist .detail-workspace {
+  max-width: 1500px;
+  grid-template-columns: minmax(0, 7fr) minmax(280px, 3fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.theme-brutalist .detail-workspace > .reading-guide {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.theme-brutalist .model-stage {
+  position: sticky;
+  top: 88px;
+  min-width: 0;
+}
+
+.theme-brutalist .model-stage .viewer-wrap {
+  min-height: clamp(560px, 68vh, 760px);
+  margin: 0;
+}
+
+.theme-brutalist .model-stage .viewer-canvas {
+  height: clamp(560px, 68vh, 760px);
+}
+
+.theme-brutalist .detail-rail {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.theme-brutalist .detail-support {
+  display: grid;
+  gap: 14px;
+}
+
+.theme-brutalist .detail-support .block,
+.theme-brutalist .detail-rail .panel {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.theme-brutalist .detail-support .block {
+  padding: 22px;
+}
+
+.theme-brutalist .detail-support .block h2 {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.theme-brutalist .detail-support .block p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.theme-brutalist .detail-support .image-block {
+  padding: 10px;
+}
+
+.theme-brutalist .detail-support .image-block img {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+}
+
+.theme-brutalist .detail-support .image-block figcaption {
+  padding-top: 7px;
+}
+
+@media (max-width: 1099px) {
+  .theme-brutalist .detail-workspace {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .theme-brutalist .detail-workspace > .reading-guide {
+    grid-column: 1;
+  }
+
+  .theme-brutalist .model-stage {
+    position: static;
+  }
+
+  .theme-brutalist .model-stage .viewer-wrap,
+  .theme-brutalist .model-stage .viewer-canvas {
+    height: 560px;
+    min-height: 560px;
+  }
+
+  .theme-brutalist .detail-rail {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: start;
   }
 
-  .theme-brutalist .detail-grid article:has(.image-block) > .reading-guide {
+  .theme-brutalist .detail-support {
     grid-column: 1 / -1;
-  }
-
-  .theme-brutalist .detail-grid article:has(.image-block) > .image-block {
-    grid-column: 2;
-    width: 100%;
-    min-width: 0;
-    margin: 0 0 18px;
-    padding: 12px;
-  }
-
-  .theme-brutalist .detail-grid article:has(.image-block) > .image-block img {
-    display: block;
-    width: 100%;
-    max-height: 220px;
-    object-fit: contain;
-  }
-
-  .theme-brutalist .detail-grid article:has(.image-block) > .viewer-wrap,
-  .theme-brutalist .detail-grid article:has(.image-block) > .block:not(.image-block),
-  .theme-brutalist .detail-grid article:has(.image-block) > .empty-model {
-    grid-column: 1;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
 
 @media (max-width: 760px) {
-  .theme-brutalist .detail-grid article > .image-block {
-    width: 100%;
-    margin: 0 0 16px;
-    padding: 10px;
+  .theme-brutalist .detail-workspace {
+    padding-top: 24px;
+    gap: 16px;
   }
 
-  .theme-brutalist .detail-grid article > .image-block img {
-    display: block;
-    width: 100%;
-    max-height: 360px;
-    object-fit: contain;
+  .theme-brutalist .detail-hero h1 {
+    max-width: none;
+    font-size: clamp(34px, 9.3vw, 38px);
+    line-height: 1.02;
+  }
+
+  .theme-brutalist .model-stage .viewer-wrap,
+  .theme-brutalist .model-stage .viewer-canvas {
+    height: 430px;
+    min-height: 430px;
+  }
+
+  .theme-brutalist .detail-rail,
+  .theme-brutalist .detail-support {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .theme-brutalist .detail-support .block {
+    padding: 18px;
+  }
+
+  .theme-brutalist .detail-support .image-block {
+    padding: 8px;
+  }
+
+  .theme-brutalist .detail-support .image-block img {
+    max-height: 260px;
   }
 }
 
