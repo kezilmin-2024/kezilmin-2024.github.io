@@ -50,7 +50,30 @@ function enhanceHomepageMediaAndMotion() {
   }, { rootMargin: "80px 0px" });
 
   const prepare = scope => {
-    scope.querySelectorAll?.(".hero-actions .button, .contact-link").forEach(element => {
+    scope.querySelectorAll?.(".hero-actions .button").forEach(button => {
+      if (button.closest(".cta-stage")) return;
+
+      const stage = document.createElement("span");
+      const isResume = button.classList.contains("alt");
+      stage.className = `cta-stage ${isResume ? "cta-stage-resume" : "cta-stage-projects"}`;
+      button.before(stage);
+      stage.append(button);
+
+      if (isResume) {
+        const bubbles = document.createElement("span");
+        bubbles.className = "cta-bubbles";
+        bubbles.setAttribute("aria-hidden", "true");
+        for (let index = 0; index < 5; index += 1) bubbles.append(document.createElement("i"));
+        stage.append(bubbles);
+      } else {
+        const ring = document.createElement("span");
+        ring.className = "cta-ring";
+        ring.setAttribute("aria-hidden", "true");
+        stage.append(ring);
+      }
+    });
+
+    scope.querySelectorAll?.(".hero-actions .button, .contact-link, .cta-stage").forEach(element => {
       if (!element.dataset.motionReady && motionObserver) {
         element.dataset.motionReady = "true";
         motionObserver.observe(element);

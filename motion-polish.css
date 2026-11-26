@@ -93,7 +93,7 @@
   animation-delay: 440ms;
 }
 
-.editorial-intro .hero-actions .button + .button {
+.editorial-intro .hero-actions .button.alt {
   animation-delay: 540ms;
 }
 
@@ -401,8 +401,8 @@
   inset: 50% 0 auto;
   overflow: hidden;
   color: #718da8;
-  opacity: 0.055;
-  filter: blur(2px);
+  opacity: 0.13;
+  filter: blur(1px);
   font: 900 clamp(112px, 22vw, 340px)/0.85 Arial, sans-serif;
   letter-spacing: -0.075em;
   white-space: nowrap;
@@ -426,12 +426,162 @@
 @media (max-width: 700px) {
   .ambient-welcome {
     font-size: clamp(64px, 18vw, 112px);
-    opacity: 0.04;
+    opacity: 0.1;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .ambient-welcome {
+    animation: none;
+  }
+}
+
+/* Ambient CTA ornaments stay outside the clickable circles. */
+.theme-brutalist .home .hero-v3 .hero-actions {
+  overflow: visible;
+}
+
+.theme-brutalist .home .cta-stage {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  overflow: visible;
+}
+
+.theme-brutalist .home .cta-stage > .button {
+  position: relative;
+  z-index: 2;
+}
+
+.theme-brutalist .home .cta-ring {
+  position: absolute;
+  z-index: 1;
+  inset: -11px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 8deg,
+    #ff8737 0 17%,
+    transparent 17% 25%,
+    #ffb15a 25% 48%,
+    transparent 48% 58%,
+    #ff8737 58% 81%,
+    transparent 81% 90%,
+    #c95f1f 90% 100%
+  );
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3.5px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3.5px));
+  pointer-events: none;
+  animation: cta-ring-spin 12s linear infinite;
+  animation-play-state: paused;
+}
+
+.theme-brutalist .home .cta-bubbles {
+  position: absolute;
+  z-index: 1;
+  inset: -14px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.theme-brutalist .home .cta-bubbles i {
+  position: absolute;
+  display: block;
+  border: 1px solid rgb(23 92 255 / 42%);
+  border-radius: 50%;
+  background: rgb(184 216 236 / 32%);
+  opacity: .72;
+  animation-play-state: paused;
+}
+
+.theme-brutalist .home .cta-bubbles i:nth-child(1) {
+  top: 3%;
+  left: 5%;
+  width: 18px;
+  height: 18px;
+  animation: cta-bubble-a 7.8s cubic-bezier(.45, 0, .55, 1) -2.4s infinite;
+}
+
+.theme-brutalist .home .cta-bubbles i:nth-child(2) {
+  top: 12%;
+  right: -2%;
+  width: 10px;
+  height: 10px;
+  background: rgb(255 189 126 / 26%);
+  border-color: rgb(255 135 55 / 42%);
+  animation: cta-bubble-b 6.8s cubic-bezier(.45, 0, .55, 1) -4.1s infinite;
+}
+
+.theme-brutalist .home .cta-bubbles i:nth-child(3) {
+  right: -5%;
+  bottom: 13%;
+  width: 22px;
+  height: 22px;
+  animation: cta-bubble-a 9.4s cubic-bezier(.45, 0, .55, 1) -6.2s infinite reverse;
+}
+
+.theme-brutalist .home .cta-bubbles i:nth-child(4) {
+  bottom: -2%;
+  left: 24%;
+  width: 13px;
+  height: 13px;
+  background: rgb(132 175 206 / 24%);
+  animation: cta-bubble-b 8.6s cubic-bezier(.45, 0, .55, 1) -1.7s infinite reverse;
+}
+
+.theme-brutalist .home .cta-bubbles i:nth-child(5) {
+  top: 52%;
+  left: -3%;
+  width: 8px;
+  height: 8px;
+  animation: cta-bubble-a 7.2s cubic-bezier(.45, 0, .55, 1) -5.3s infinite;
+}
+
+.theme-brutalist .home .cta-stage .cta-bubbles i {
+  animation-play-state: paused;
+}
+
+.theme-brutalist .home .cta-stage.is-motion-visible .cta-ring,
+.theme-brutalist .home .cta-stage.is-motion-visible .cta-bubbles i {
+  animation-play-state: running;
+}
+
+@keyframes cta-ring-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes cta-bubble-a {
+  0%, 100% { transform: translate3d(0, 4px, 0); opacity: .56; }
+  50% { transform: translate3d(7px, -7px, 0); opacity: .9; }
+}
+
+@keyframes cta-bubble-b {
+  0%, 100% { transform: translate3d(3px, -2px, 0); opacity: .48; }
+  50% { transform: translate3d(-6px, 8px, 0); opacity: .82; }
+}
+
+@media (max-width: 760px) {
+  .theme-brutalist .home .cta-stage {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .theme-brutalist .home .cta-ring {
+    inset: -7px;
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2.5px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2.5px));
+  }
+
+  .theme-brutalist .home .cta-bubbles {
+    inset: -8px;
+    transform: scale(.82);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-brutalist .home .cta-ring,
+  .theme-brutalist .home .cta-bubbles i {
     animation: none;
   }
 }
