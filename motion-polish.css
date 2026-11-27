@@ -441,58 +441,48 @@
 .theme-brutalist .home .cta-goo {
   position: absolute;
   z-index: 1;
-  inset: -18px;
-  width: calc(100% + 36px);
-  height: calc(100% + 36px);
+  inset: -36px;
+  width: calc(100% + 72px);
+  height: calc(100% + 72px);
   overflow: visible;
   pointer-events: none;
 }
 
 .theme-brutalist .home .cta-orbits .orbit-layer {
-  transform-box: fill-box;
-  transform-origin: center;
+  transform-box: view-box;
+  transform-origin: 150px 150px;
   animation-play-state: paused;
 }
 
-.theme-brutalist .home .cta-orbits circle {
+.theme-brutalist .home .cta-orbits path {
   fill: none;
   stroke-linecap: round;
 }
 
-.theme-brutalist .home .orbit-layer-1 {
-  animation: orbit-spin-forward 12s linear infinite;
-}
-.theme-brutalist .home .orbit-layer-1 circle {
-  stroke: url(#orbit-warm-a);
-  stroke-width: 3.2;
-  stroke-dasharray: 23 8 7 12 17 33;
-}
-.theme-brutalist .home .orbit-layer-2 {
-  animation: orbit-spin-reverse 19s linear infinite;
-}
-.theme-brutalist .home .orbit-layer-2 circle {
-  stroke: url(#orbit-warm-b);
-  stroke-width: 5.2;
-  stroke-dasharray: 12 13 29 10 5 31;
-}
-.theme-brutalist .home .orbit-layer-3 {
-  animation: orbit-spin-forward 16s linear infinite;
-}
-.theme-brutalist .home .orbit-layer-3 circle {
-  stroke: url(#orbit-warm-a);
-  stroke-width: 2;
-  stroke-dasharray: 38 18 8 36;
-}
-.theme-brutalist .home .orbit-layer-4 {
-  animation: orbit-spin-reverse 22s linear infinite;
-}
-.theme-brutalist .home .orbit-layer-4 circle {
-  stroke: url(#orbit-warm-b);
-  stroke-width: 2.8;
-  stroke-dasharray: 9 18 20 16 11 26;
-}
+.theme-brutalist .home .orbit-main { animation: orbit-spin-forward 9s linear infinite; }
+.theme-brutalist .home .orbit-mid { animation: orbit-spin-reverse 14s linear infinite; }
+.theme-brutalist .home .orbit-fine { animation: orbit-spin-forward 11s linear infinite; }
 
-.theme-brutalist .home .cta-stage.is-motion-visible .orbit-layer,
+.theme-brutalist .home .orbit-ribbon {
+  stroke: none;
+  fill: url(#orbit-ribbon-a);
+}
+.theme-brutalist .home .orbit-ribbon-b { fill: url(#orbit-ribbon-b); }
+.theme-brutalist .home .orbit-ribbon-c { fill: url(#orbit-ribbon-a); opacity: .84; }
+.theme-brutalist .home .orbit-mid path {
+  stroke: url(#orbit-ribbon-b);
+  stroke-width: 6.5;
+}
+.theme-brutalist .home .orbit-mid path:nth-child(2) { stroke-width: 4.5; opacity: .88; }
+.theme-brutalist .home .orbit-mid path:nth-child(3) { stroke-width: 7.5; opacity: .7; }
+.theme-brutalist .home .orbit-fine path {
+  stroke: url(#orbit-line);
+  stroke-width: 2.4;
+  opacity: .88;
+}
+.theme-brutalist .home .orbit-fine path:nth-child(2) { stroke-width: 3; opacity: .62; }
+
+  .theme-brutalist .home .cta-stage.is-motion-visible .orbit-layer,
 .theme-brutalist .home .cta-stage.is-motion-visible .goo-drop {
   animation-play-state: running;
 }
@@ -582,19 +572,34 @@
   overflow: hidden;
 }
 .theme-brutalist .home .contact-rail::after {
-  content: "";
+  content: none;
+}
+.theme-brutalist .home .contact-stripe-art {
   position: absolute;
   z-index: 0;
   inset: 0;
-  background: repeating-linear-gradient(48deg, transparent 0 48px, rgb(245 242 233 / 34%) 49px 50px, transparent 51px 82px);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   pointer-events: none;
 }
+.theme-brutalist .home .contact-stripe-art .stripe {
+  stroke: var(--br-paper, #f5f2e9);
+  vector-effect: non-scaling-stroke;
+  shape-rendering: geometricPrecision;
+}
+.theme-brutalist .home .contact-stripe-art .stripe-hairline { stroke-width: 1px; opacity: .23; }
+.theme-brutalist .home .contact-stripe-art .stripe-quiet { stroke-width: 1px; opacity: .3; }
+.theme-brutalist .home .contact-stripe-art .stripe-fine { stroke-width: 2px; opacity: .42; }
+.theme-brutalist .home .contact-stripe-art .stripe-medium { stroke-width: 3.5px; opacity: .48; }
+.theme-brutalist .home .contact-stripe-art .stripe-anchor { stroke-width: 5.5px; opacity: .66; }
+.theme-brutalist .home .contact-stripe-art .stripe-anchor-mid { opacity: .58; }
 .theme-brutalist .home .contact-rail::before,
 .theme-brutalist .home .contact-link { position: relative; z-index: 1; }
 
 @media (hover: hover) and (pointer: fine) {
-  .theme-brutalist .home .cta-stage-projects:hover .orbit-layer-1 { animation-duration: 9s; }
-  .theme-brutalist .home .cta-stage-projects:hover .orbit-layer-2 { animation-duration: 14s; }
+  .theme-brutalist .home .cta-stage-projects:hover .orbit-main { animation-duration: 7.5s; }
+  .theme-brutalist .home .cta-stage-projects:hover .orbit-mid { animation-duration: 11s; }
 }
 
 @media (max-width: 760px) {
@@ -610,9 +615,15 @@
     width: calc(100% + 16px);
     height: calc(100% + 16px);
   }
-  .theme-brutalist .home .orbit-layer-1 circle,
-  .theme-brutalist .home .orbit-layer-2 circle { stroke-width: 3; }
-  .theme-brutalist .home .orbit-layer-4 { display: none; }
+  .theme-brutalist .home .cta-orbits {
+    inset: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+  }
+  .theme-brutalist .home .orbit-ribbon-c,
+  .theme-brutalist .home .orbit-fine { display: none; }
+  .theme-brutalist .home .orbit-mid path { stroke-width: 5px; }
+  .theme-brutalist .home .orbit-mid path:nth-child(3) { stroke-width: 5.5px; }
   .theme-brutalist .home .goo-drop-5,
   .theme-brutalist .home .goo-drop-6 { display: none; }
   .theme-brutalist .home .hero-triangle { width: .52em; height: .48em; }
