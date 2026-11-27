@@ -576,29 +576,6 @@
 .theme-brutalist .home .hero-triangle polygon { fill: var(--home-blue, #2563eb); }
 @keyframes hero-triangle-spin { to { transform: rotate(360deg); } }
 
-.theme-brutalist .home .mark-xmu { isolation: isolate; overflow: hidden; }
-.theme-brutalist .home .mark-xmu > img,
-.theme-brutalist .home .mark-xmu > span,
-.theme-brutalist .home .mark-xmu::before { position: relative; z-index: 2; }
-.theme-brutalist .home .xmu-flow-lines {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-.theme-brutalist .home .xmu-flow-lines path {
-  fill: none;
-  stroke: url(#xmu-flow-gradient);
-  stroke-linecap: round;
-}
-.theme-brutalist .home .xmu-flow-wide { stroke-width: 10; opacity: .8; }
-.theme-brutalist .home .xmu-flow-mid { stroke-width: 4; opacity: .75; }
-.theme-brutalist .home .xmu-flow-thin { stroke-width: 1.6; opacity: .62; }
-.theme-brutalist .home .xmu-flow-thin-b { opacity: .46; }
-.theme-brutalist .home .xmu-flow-thin-c { opacity: .3; }
-
 .theme-brutalist .home .contact-rail {
   position: relative;
   isolation: isolate;
@@ -639,7 +616,6 @@
   .theme-brutalist .home .goo-drop-5,
   .theme-brutalist .home .goo-drop-6 { display: none; }
   .theme-brutalist .home .hero-triangle { width: .52em; height: .48em; }
-  .theme-brutalist .home .xmu-flow-wide { stroke-width: 7; }
 }
 
 @media (prefers-reduced-motion: reduce) {

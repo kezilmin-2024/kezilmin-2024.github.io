@@ -99,19 +99,6 @@ function enhanceHomepageMediaAndMotion() {
       heroName.insertAdjacentHTML("beforeend", `<svg class="hero-triangle" viewBox="0 0 100 88" aria-hidden="true" focusable="false"><g><polygon points="50,2 98,86 2,86" /></g></svg>`);
     }
 
-    const xmuCard = scope.querySelector?.(".mark-xmu");
-    if (xmuCard && !xmuCard.querySelector(".xmu-flow-lines")) {
-      xmuCard.insertAdjacentHTML("beforeend", `
-        <svg class="xmu-flow-lines" viewBox="0 0 520 180" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-          <defs><linearGradient id="xmu-flow-gradient" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#164AAB"/><stop offset=".52" stop-color="#2563EB"/><stop offset="1" stop-color="#93C5FD" stop-opacity=".25"/></linearGradient></defs>
-          <path class="xmu-flow-wide" d="M-35 146 C 68 92, 135 190, 248 137 S 410 82, 566 128" />
-          <path class="xmu-flow-mid" d="M-28 159 C 83 117, 150 195, 268 145 S 438 101, 554 142" />
-          <path class="xmu-flow-thin xmu-flow-thin-a" d="M-15 118 C 101 82, 163 171, 287 119 S 439 72, 548 104" />
-          <path class="xmu-flow-thin xmu-flow-thin-b" d="M328 -18 C 378 24, 407 34, 524 18" />
-          <path class="xmu-flow-thin xmu-flow-thin-c" d="M350 -12 C 404 38, 444 43, 536 35" />
-        </svg>`);
-    }
-
     scope.querySelectorAll?.(".hero-actions .button, .contact-link, .cta-stage, .hero-name").forEach(element => {
       if (!element.dataset.motionReady && motionObserver) {
         element.dataset.motionReady = "true";
