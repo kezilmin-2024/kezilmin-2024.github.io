@@ -446,58 +446,26 @@
 }
 
 .theme-brutalist .home .cta-orbits {
-  inset: -48px;
-  width: calc(100% + 96px);
-  height: calc(100% + 96px);
+  inset: -16%;
+  width: 132%;
+  height: 132%;
+  fill: none;
 }
-
 .theme-brutalist .home .cta-orbits-front { z-index: 3; }
-
-.theme-brutalist .home .cta-orbits .orbit-layer {
+.theme-brutalist .home .cta-orbits .saturn-flow {
   transform-box: view-box;
-  transform-origin: 150px 150px;
+  transform-origin: 160px 160px;
+  animation: saturn-travel 14s linear infinite;
   animation-play-state: paused;
 }
-
-.theme-brutalist .home .cta-orbits .orbit-mid path,
-.theme-brutalist .home .cta-orbits .orbit-fine path {
-  fill: none;
-  stroke-linecap: round;
+.theme-brutalist .home .cta-orbits .saturn-flow-secondary {
+  animation-duration: 11s;
+  animation-direction: reverse;
 }
-
-.theme-brutalist .home .orbit-main { animation: orbit-spin-forward 14s linear infinite; }
-.theme-brutalist .home .orbit-mid { animation: orbit-spin-reverse 10s linear infinite; }
-.theme-brutalist .home .orbit-fine { animation: orbit-spin-forward 12s linear infinite; }
-
-.theme-brutalist .home .cta-orbits .orbit-ribbon {
-  stroke: none;
-}
-.theme-brutalist .home .cta-orbits-back .orbit-ribbon-a { fill: url(#orbit-back-ribbon-a); }
-.theme-brutalist .home .cta-orbits-back .orbit-ribbon-b { fill: url(#orbit-back-ribbon-b); }
-.theme-brutalist .home .cta-orbits-front .orbit-ribbon-a { fill: url(#orbit-front-ribbon-a); }
-.theme-brutalist .home .cta-orbits-front .orbit-ribbon-b { fill: url(#orbit-front-ribbon-b); }
-.theme-brutalist .home .orbit-mid path {
-  stroke: url(#orbit-back-ribbon-b);
-  stroke-width: 8px;
-}
-.theme-brutalist .home .cta-orbits-front .orbit-mid path { stroke: url(#orbit-front-ribbon-b); }
-.theme-brutalist .home .orbit-mid path:nth-child(2) { stroke-width: 5px; opacity: .92; }
-.theme-brutalist .home .orbit-mid path:nth-child(3) { stroke-width: 10px; opacity: .78; }
-.theme-brutalist .home .orbit-fine path {
-  stroke: url(#orbit-back-line);
-  stroke-width: 3px;
-  opacity: .94;
-}
-.theme-brutalist .home .cta-orbits-front .orbit-fine path { stroke: url(#orbit-front-line); }
-.theme-brutalist .home .orbit-fine path:nth-child(2) { stroke-width: 2px; opacity: .72; }
-
-  .theme-brutalist .home .cta-stage.is-motion-visible .orbit-layer,
-.theme-brutalist .home .cta-stage.is-motion-visible .goo-drop {
-  animation-play-state: running;
-}
-
-@keyframes orbit-spin-forward { to { transform: rotate(360deg); } }
-@keyframes orbit-spin-reverse { to { transform: rotate(-360deg); } }
+.theme-brutalist .home .cta-orbits .saturn-flow-accent { animation-duration: 16s; }
+.theme-brutalist .home .cta-stage.is-motion-visible .saturn-flow,
+.theme-brutalist .home .cta-stage.is-motion-visible .goo-drop { animation-play-state: running; }
+@keyframes saturn-travel { to { transform: rotate(360deg); } }
 
 .theme-brutalist .home .cta-goo {
   inset: -20px;
@@ -606,10 +574,7 @@
 .theme-brutalist .home .contact-rail::before,
 .theme-brutalist .home .contact-link { position: relative; z-index: 1; }
 
-@media (hover: hover) and (pointer: fine) {
-  .theme-brutalist .home .cta-stage-projects:hover .orbit-main { animation-duration: 12s; }
-  .theme-brutalist .home .cta-stage-projects:hover .orbit-mid { animation-duration: 9s; }
-}
+
 
 @media (max-width: 760px) {
   .theme-brutalist .home .hero-v3 .hero-actions .button {
@@ -625,20 +590,17 @@
     height: calc(100% + 16px);
   }
   .theme-brutalist .home .cta-orbits {
-    inset: -34px;
-    width: calc(100% + 68px);
-    height: calc(100% + 68px);
+    inset: -12%;
+    width: 124%;
+    height: 124%;
   }
-  .theme-brutalist .home .orbit-fine { display: none; }
-  .theme-brutalist .home .orbit-mid path { stroke-width: 6px; }
-  .theme-brutalist .home .orbit-mid path:nth-child(3) { stroke-width: 7px; }
   .theme-brutalist .home .goo-drop-5,
   .theme-brutalist .home .goo-drop-6 { display: none; }
   .theme-brutalist .home .hero-triangle { width: .52em; height: .48em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .theme-brutalist .home .orbit-layer,
+  .theme-brutalist .home .cta-orbits .saturn-flow,
   .theme-brutalist .home .goo-drop,
   .theme-brutalist .home .hero-triangle g {
     animation: none;
