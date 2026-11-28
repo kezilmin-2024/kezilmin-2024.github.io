@@ -80,29 +80,38 @@ function enhanceHomepageMediaAndMotion() {
             </g>
           </svg>`);
       } else {
-        stage.insertAdjacentHTML("beforeend", `
-          <svg class="cta-orbits" viewBox="0 0 300 300" aria-hidden="true" focusable="false">
+        // Rotate circular ribbons inside a fixed projection: the ellipse never tumbles.
+        const ribbon = (radius, width, start, sweep) => {
+          const points = (sign) => Array.from({ length: 49 }, (_, i) => {
+            const t = i / 48;
+            const angle = (start + sweep * t) * Math.PI / 180;
+            const r = radius + sign * width * Math.pow(Math.sin(Math.PI * t), 1.2) / 2;
+            return [(160 + r * Math.cos(angle)).toFixed(2), (160 + r * Math.sin(angle)).toFixed(2)].join(',');
+          });
+          return 'M' + points(1).join(' L') + ' L' + points(-1).reverse().join(' L') + ' Z';
+        };
+        const bands = [
+          [145, 17, 8, 108, 'main'], [145, 14, 190, 78, 'main'],
+          [132, 7, 98, 66, 'secondary'], [155, 4, 292, 36, 'accent']
+        ];
+        const orbitSvg = side => {
+          const id = 'project-saturn-' + side;
+          const front = side === 'front';
+          return `<svg class="cta-orbits cta-orbits-${side}" viewBox="0 0 320 320" fill="none" aria-hidden="true" focusable="false">
             <defs>
-              <linearGradient id="orbit-ribbon-a" x1="28" y1="30" x2="250" y2="252" gradientUnits="userSpaceOnUse"><stop stop-color="#FFC078"/><stop offset=".46" stop-color="#FF8A2A"/><stop offset="1" stop-color="#F05A16"/></linearGradient>
-              <linearGradient id="orbit-ribbon-b" x1="246" y1="38" x2="46" y2="258" gradientUnits="userSpaceOnUse"><stop stop-color="#FFC078"/><stop offset=".44" stop-color="#FF8A2A"/><stop offset="1" stop-color="#F05A16"/></linearGradient>
-              <linearGradient id="orbit-line" x1="54" y1="36" x2="252" y2="232" gradientUnits="userSpaceOnUse"><stop stop-color="#FFC078"/><stop offset=".52" stop-color="#FF8A2A"/><stop offset="1" stop-color="#F05A16"/></linearGradient>
+              <linearGradient id="${id}-paint" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#FFB347"/><stop offset=".48" stop-color="#FF7A18"/><stop offset="1" stop-color="#E95413"/>
+              </linearGradient>
+              <clipPath id="${id}-half"><rect x="-20" y="${front ? 160 : -20}" width="360" height="180"/></clipPath>
             </defs>
-            <g class="orbit-layer orbit-main">
-              <path class="orbit-ribbon orbit-ribbon-a" d="M30 80 C76 17 179 4 244 49 L238 59 C179 22 95 30 42 91 Z" />
-              <path class="orbit-ribbon orbit-ribbon-b" d="M50 221 C96 271 186 280 249 226 L239 215 C181 257 107 247 62 211 Z" />
-              <path class="orbit-ribbon orbit-ribbon-c" d="M242 99 C277 137 274 188 242 220 L229 212 C255 181 256 141 230 109 Z" />
+            <g transform="translate(160 160) rotate(-20) scale(1 .72) translate(-160 -160)">
+              <g clip-path="url(#${id}-half)">
+                ${bands.map(([r, w, a, length, speed]) => `<g class="saturn-flow saturn-flow-${speed}"><path d="${ribbon(r, w, a, length)}" fill="url(#${id}-paint) #FF7A18" stroke="none"/></g>`).join('')}
+              </g>
             </g>
-            <g class="orbit-layer orbit-mid">
-              <path d="M42 133 C53 95 74 67 108 46" />
-              <path d="M174 31 C213 34 242 55 259 84" />
-              <path d="M226 236 C192 258 151 267 112 260" />
-            </g>
-            <g class="orbit-layer orbit-fine">
-              <path d="M46 188 C53 214 70 238 96 254" />
-              <path d="M92 35 C121 22 151 20 177 27" />
-              <path d="M257 145 C256 170 248 192 234 211" />
-            </g>
-          </svg>`);
+          </svg>`;
+        };
+        stage.insertAdjacentHTML('beforeend', orbitSvg('back') + orbitSvg('front'));
       }
     });
 
